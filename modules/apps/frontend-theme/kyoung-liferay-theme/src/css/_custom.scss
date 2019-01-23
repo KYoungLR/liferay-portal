@@ -15,8 +15,8 @@ header {
 	}
 
 	.text-default {
-		color: #6B6C7E;
-		font-weight: 600;
+		color: black;
+		font-weight: 900;
 	}
 
 	.field-wrapper {
@@ -71,6 +71,22 @@ header {
 		}
 	}
 }
+
+
+/*--------------------*/
+/* DYNAMIC CSS */
+/*--------------------*/
+#p_p_id_com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet_{
+	// margin-top: 75px;
+    // margin-left: 44vw;
+	// position: fixed;
+	// z-index: 3;
+    // display: inline-block;
+	margin-left: 34vw;
+	margin-top: 25px;
+}
+
+
 
 .portlet-layout {
 	.portlet {
@@ -336,7 +352,7 @@ button:focus {
 .mu-menu-btn {
 	position: fixed;
 	right: 15%;
-	top: 50px;
+	top: 100px;
 	color: #fff;
 	font-size: 25px;
 	border: 2px solid #fff;
@@ -795,14 +811,14 @@ button:focus {
 	display: block;
 }
 
-.mu-video-iframe-area iframe {
+// .mu-video-iframe-area iframe {
 
-}
+// }
 
 
 
 /*--------------------*/
-/* APPPS SCREENSHOT */
+/* APPS SCREENSHOT */
 /*--------------------*/
 
 

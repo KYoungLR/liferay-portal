@@ -38,6 +38,24 @@
 
 <@liferay.control_menu />  	
 <!-- Start Header -->
+
+<#assign secondaryNavigationPreferencesMap = 
+  {
+    "displayStyle": "ddmTemplate_NAVBAR-BLANK-JUSTIFIED-FTL", 
+    "portletSetupPortletDecoratorId": "barebone", 
+    "rootLayoutType": "relative", 
+    "siteNavigationMenuId": "0", 
+    "siteNavigationMenuType": "1"
+  } 
+/>
+
+<@liferay.navigation_menu
+  default_preferences=
+  freeMarkerPortletPreferences.getPreferences(secondaryNavigationPreferencesMap)
+  instance_id="main_navigation_menu"
+/>
+
+<#if show_header>
 	<header id="mu-header" class="" role="banner">
 		<div class="mu-header-overlay">
 			<div class="container">
@@ -48,18 +66,25 @@
 						<!-- text based logo -->
 						<!-- <a class="mu-logo" href="#">Airbnb App</a> -->
 						<!-- image based logo -->
-						<a class="mu-logo" href="#"><img src="/o/kyoung-liferay-theme/images/logo.png" alt="logo img"></a>
+						<#--  <a class="mu-logo" href="#"><img src="/o/kyoung-liferay-theme/images/logo.png" alt="logo img"></a>  -->
+						<a class="mu-logo" href="#"><img src="${site_logo}" alt="logo img ${logo_description}"></a>
+
 					</div>
 					<!-- End Logo -->
-
+					<#--  Login  -->
+						<div class="user-personal-barl">
+							<@liferay.user_personal_bar />
+						</div>
 					<!-- Start header featured area -->
 					<div class="mu-header-featured-area">
 						<div class="mu-header-featured-img">
 							<img src="/o/kyoung-liferay-theme/images/iphone.png" alt="iphone image">
 						</div>
 
-						<div class="mu-header-featured-content">
-							<h1>Welcome To <span>Airbnb</span></h1>
+						<#if show_site_name>
+							<div class="mu-header-featured-content">
+								<h1>Welcome To <span>${site_name}</span></h1>
+						</#if>	
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nisi, consectetur odit voluptate labore veniam, neque iure cumque aut recusandae iusto. Aliquid quos vel optio dolore consequuntur accusantium autem quaerat!</p>
 
 							<div class="mu-app-download-area">
@@ -78,6 +103,7 @@
 		</div>
 	</header>
 	<!-- End Header -->
+</#if>
 
 	<!-- Start Menu -->
 	<button class="mu-menu-btn">
@@ -88,13 +114,20 @@
 			<a class="mu-menu-close-btn" href="#"><span class="mu-line"></span></a>
 			<nav class="mu-menu" role="navigation">
 				<ul>
-					<li><a href="#mu-header">Header</a></li>
+					<#--  <li>
+						<div class="user-personal-bar">
+							<@liferay.user_personal_bar />
+						</div>
+					</li>  -->
+
+					<#--  <li><a href="#mu-header">Header</a></li>  -->
 					<li><a href="#mu-feature">App Feature</a></li>
 					<li><a href="#mu-video">Promo Video</a></li>
 					<li><a href="#mu-apps-screenshot">Apps Screenshot</a></li>
 					<li><a href="#mu-download">Download</a></li>
 					<li><a href="#mu-faq">FAQ</a></li>
 					<li><a href="#mu-contact">Get In Touch</a></li>
+				
 				</ul>
 			</nav>
 		</div>
