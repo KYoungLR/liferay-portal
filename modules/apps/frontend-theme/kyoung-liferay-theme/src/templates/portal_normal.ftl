@@ -39,7 +39,7 @@
 <@liferay.control_menu />  	
 <!-- Start Header -->
 
-<#assign secondaryNavigationPreferencesMap = 
+<#--  <#assign secondaryNavigationPreferencesMap = 
   {
     "displayStyle": "ddmTemplate_NAVBAR-BLANK-JUSTIFIED-FTL", 
     "portletSetupPortletDecoratorId": "barebone", 
@@ -53,7 +53,8 @@
   default_preferences=
   freeMarkerPortletPreferences.getPreferences(secondaryNavigationPreferencesMap)
   instance_id="main_navigation_menu"
-/>
+/>  -->
+
 
 <#if show_header>
 	<header id="mu-header" class="" role="banner">
@@ -70,11 +71,43 @@
 						<a class="mu-logo" href="#"><img src="${site_logo}" alt="logo img ${logo_description}"></a>
 
 					</div>
-					<!-- End Logo -->
-					<#--  Login  -->
-						<div class="user-personal-barl">
+
+			<div class="mb-4 navbar navbar-classic navbar-expand-md navbar-light pb-3">
+				<div class="container">
+					<#--  <a class="${logo_css_class} align-items-center d-inline-flex d-md-none logo-xs" href="${site_default_url}" rel="nofollow">
+						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+
+						<#if show_site_name>
+							<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
+						</#if>
+					</a>  -->
+					<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
+
+					<#--  <#include "${full_templates_path}/navigation.ftl" />  -->
+							<#--  <@liferay.user_personal_bar />  -->
+
+					
+					<#--  <div class="navbar navbar-classic navbar-top py-3">
+				<div class="container user-personal-bar">
+					<div class="align-items-center autofit-row">
+
+						<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
+
+						<div class="autofit-col">
 							<@liferay.user_personal_bar />
 						</div>
+					</div>
+				</div>  -->
+			</div>
+				</div>
+			</div>
+
+
+					<!-- End Logo -->
+					<#--  Login  -->
+						<#--  <div class="user-personal-barl">
+							<@liferay.user_personal_bar />
+						</div>  -->
 					<!-- Start header featured area -->
 					<div class="mu-header-featured-area">
 						<div class="mu-header-featured-img">
@@ -114,21 +147,27 @@
 			<a class="mu-menu-close-btn" href="#"><span class="mu-line"></span></a>
 			<nav class="mu-menu" role="navigation">
 				<ul>
-					<#--  <li>
-						<div class="user-personal-bar">
+									<div id="wrapper">
+					<li>
+						<div id = "center" class="user-personal-bar">
 							<@liferay.user_personal_bar />
 						</div>
-					</li>  -->
+					</li>
+					<li>
+					<div id = "center"> <#include "${full_templates_path}/navigation.ftl" /></div>
+					</li>
 
-					<#--  <li><a href="#mu-header">Header</a></li>  -->
+			</div>
+
+					<#--  <li><a href="#mu-header">Header</a></li>
 					<li><a href="#mu-feature">App Feature</a></li>
 					<li><a href="#mu-video">Promo Video</a></li>
 					<li><a href="#mu-apps-screenshot">Apps Screenshot</a></li>
 					<li><a href="#mu-download">Download</a></li>
 					<li><a href="#mu-faq">FAQ</a></li>
 					<li><a href="#mu-contact">Get In Touch</a></li>
-				
-				</ul>
+				  -->
+				<#--  </ul>  -->
 			</nav>
 		</div>
 	</div>

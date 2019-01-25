@@ -9,6 +9,7 @@
 @import "portlet/portlet_decorators";
 @import "portlet/portlet_hello_world";
 
+
 header {
 	.portlet, .field-wrapper, .form-group {
 		margin-bottom: 0;
@@ -76,17 +77,51 @@ header {
 /*--------------------*/
 /* DYNAMIC CSS */
 /*--------------------*/
+
+#wrapper {
+	text-align: center;
+  }
+#center {
+	display: inline-block;
+  }
+
+.navbar-collapse .navbar-nav{
+	flex-direction: column;
+	list-style: disc;
+    font-size: 17px;
+	line-height: 1.59;
+}
+
 #p_p_id_com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet_{
 	// margin-top: 75px;
     // margin-left: 44vw;
 	// position: fixed;
 	// z-index: 3;
     // display: inline-block;
-	margin-left: 34vw;
-	margin-top: 25px;
+	// margin-left: 33vw;
+	// margin-top: 75px;
+}
+
+.text-truncate{
+	font-size: 35px;
+}
+
+navigation{
+	margin-left: 10px;
+}
+
+#yui_patched_v3_18_1_1_1548275622449_2050{
+    margin-top: 30px;
 }
 
 
+.navbar{
+	background-color: #ff5a60;
+}
+
+.navbar-class{
+	background-color: #ff5a60;
+}
 
 .portlet-layout {
 	.portlet {
@@ -341,7 +376,7 @@ button:focus {
 	font-size: 45px;
 	display: inline-block;
 	font-weight: 700;
-	margin-top: 35px;
+	margin-top: 60px;
 }
 
 .mu-logo:hover,
