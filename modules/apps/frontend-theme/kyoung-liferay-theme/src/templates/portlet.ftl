@@ -7,6 +7,7 @@
 	portlet_id = htmlUtil.escapeAttribute(portlet_display.getId())
 	portlet_title = htmlUtil.escape(portlet_display.getTitle())
 />
+
 <section class="portlet" id="portlet_${portlet_id}">
 	<#if portlet_display.isPortletDecorate() && !portlet_display.isStateMax() && portlet_display.getPortletConfigurationIconMenu()?? && portlet_display.getPortletToolbar()??>
 		<#assign
