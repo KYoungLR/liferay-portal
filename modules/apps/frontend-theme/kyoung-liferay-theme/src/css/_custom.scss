@@ -65,6 +65,8 @@ header {
 		vertical-align: middle;
 	}
 
+	
+
 	.user-full-name {
 		@include media-query(null, $screen-xs-max) {
 			display: none;
@@ -145,6 +147,47 @@ header {
 	}
 }
 
+.canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	background: url("/o/kyoung-liferay-theme/images/filler.png") center center/cover; }
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; }
+	.flex.row {
+		flex-direction: row; }
+	.flex.wrap {
+		flex-wrap: wrap; }
+
+.overflow-wrap {
+	overflow-x: hidden; }
+
+#home {
+	padding: 70px 0 70px 0;
+	color: #616161;
+	line-height: 11pt;
+	position: relative; }
+
+.company-name {
+	color: #fff;
+    display: inline-block;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+    text-transform: uppercase;
+	margin-bottom: 15px; 
+}
+
+.main-container{
+	margin-top: 10px;
+}
 
 body,
 html {
@@ -236,6 +279,9 @@ button:focus {
 	display: inline;
 	float: left;
 	width: 20%;
+	z-index: 5;
+	margin-left: -75%;
+    margin-top: -4%;
 }
 
 .mu-logo {
@@ -253,13 +299,13 @@ button:focus {
 
 .mu-menu-btn {
 	position: fixed;
-	right: 15%;
+	right: 5%;
 	top: 100px;
 	color: #fff;
 	font-size: 25px;
 	border: 2px solid #fff;
 	padding: 5px 14px;
-	z-index: 999;
+	z-index: 6;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
@@ -400,7 +446,7 @@ button:focus {
 .mu-menu-full-overlay-inner {
 	display: inline;
 	float: left;
-	padding: 12% 15%;	
+	padding: 5% 15%;	
 	width: 85%;
 }
 
@@ -416,10 +462,24 @@ button:focus {
 	line-height: 1.35;
 	text-align: center;
 	text-transform: uppercase;
-	margin-bottom: 10px;
+	// margin-bottom: 10px;
 	/* -webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s; */
+}
+
+.user-full-name{
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+.user-avatar-image{
+	display: none;
+}
+
+.sign-in{
+	font-size: 20px;
+    text-decoration: underline;
 }
 
 /*--------------------*/
@@ -515,7 +575,7 @@ button:focus {
 
 	
 	.mu-menu-btn {
-		top: 44px;
+		top: 60px;
 		color: #fff;
 		font-size: 20px;
 		padding: 5px 12px;
@@ -525,9 +585,9 @@ button:focus {
 		margin-top: 25px;
 	}
 
-	.mu-logo img {
-		width: 200px;
-	}
+	// .mu-logo img {
+	// 	width: 200px;
+	// }
 		
 		
 }
@@ -555,9 +615,9 @@ button:focus {
 
 @media (max-width: 480px) {
 
-	.mu-logo img {
-		width: 150px;
-	}
+	// .mu-logo img {
+	// 	width: 150px;
+	// }
 
 
 	.mu-menu-close-btn {

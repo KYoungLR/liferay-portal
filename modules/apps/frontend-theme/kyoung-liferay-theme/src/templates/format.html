@@ -19,7 +19,7 @@
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <#--  <link href="/o/kyoung-liferay-theme/css/bootstrap.min.css" rel="stylesheet">  -->
+    <link href="/o/kyoung-liferay-theme/css/bootstrap.min.css" rel="stylesheet">
     <!-- Open Sans for body and title font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
     <!--  jquery  -->
@@ -40,6 +40,8 @@
 
     <@liferay.control_menu />
     <!-- Start Header -->
+    <div class="overflow-wrap">
+
         <#-- <div class="pt-0" id="wrapper"> -->
 
             <#if show_header>
@@ -47,7 +49,7 @@
                     <!--<div class="mu-header-overlay">
 			<div class="container">
 				<div class="mu-header-area">  -->
-                    <div id="home" class="flex height-fix">
+                    <section id="home" class="flex height-fix">
                         <div id="pt" class="canvas"></div>
                         <div class="flex">
                             <!-- Start Logo -->
@@ -62,16 +64,44 @@
                                     <#assign preferences=freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId":
                                         "barebone" , "destination" : "/search" }) />
 
-                              
+                                    <!--  Search Bar  -->
+                                    <!--  <div class="autofit-col autofit-col-expand">
+							<#if show_header_search>
+								<div class="justify-content-md-end mr-4 navbar-form" role="search">
+									<@liferay.search_bar default_preferences="${preferences}" />
+								</div>
+							</#if>
+						</div>  -->
                                     <#-- </div> </div> -->
                                 </div>
 
                                 <!-- End Logo -->
 
+                                <#-- <nav class="flex">
+                                    <div class="link-wrap">
+                                        <div class="active page-link" dest="home">home</div>
+                                        <div class="page-link" dest="about">about</div>
+                                        <div class="page-link" dest="portfolio">portfolio</div>
+                                        <div class="page-link" dest="blog">blog</div>
+                                        <div class="page-link" dest="contact">contact</div>
+                                    </div>
+                                    <i class="mdi mdi-menu"></i>
+                                    </nav> -->
                         </div>
-                    </div>
+                    </section>
                 </header>
-    
+    </div>
+
+    <!-- Start header featured area -->
+    <div class="mu-header-featured-area">
+
+        <#if show_site_name>
+            <div class="mu-header-featured-content">
+                <h1>Welcome To <span>${site_name}</span></h1>
+        </#if>
+    </div>
+    </div>
+    <!-- End header featured area -->
     <#-- </div> </div> </div> -->
         <!-- End Header -->
         <!-- Start Menu -->
@@ -84,14 +114,6 @@
                 <nav class="mu-menu" role="navigation">
                     <ul>
                         <div id="wrapper-menu">
-
-						<!-- Start header featured area -->
-   <li>
-        <#if show_site_name>
-                <div class="company-name">Welcome To ${site_name}</div>
-        </#if>
-	</li>
-    <!-- End header featured area -->
                             <li>
                                 <div id="center" class="user-personal-bar">
                                     <@liferay.user_personal_bar />
@@ -102,17 +124,7 @@
                                     <#include "${full_templates_path}/navigation.ftl" />
                                 </div>
                             </li>
-      <!--  Search Bar  -->
-							<#if show_header_search>
-							 <li>
-                                <div id="center">
-								<div class="navbar-form" role="search">
-									<@liferay.search_bar default_preferences="${preferences}" />
-								</div>
-								      </div>
-                            </li>
-							</#if>
-						</div> 
+
                         </div>
                 </nav>
             </div>
@@ -164,7 +176,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <!-- Bootstrap -->
-        <#--  <script src="/o/kyoung-liferay-theme/js/bootstrap.min.js"></script>  -->
+        <script src="/o/kyoung-liferay-theme/js/bootstrap.min.js"></script>
 
 
 
