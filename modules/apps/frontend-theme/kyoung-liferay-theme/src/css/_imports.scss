@@ -7,3 +7,27 @@
 @import "compat/mixins";
 
 @import "clay/atlas-variables";
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 'normal';
+    src: url('font-awesome/font/OpenSans-Regular.ttf')  format('truetype') 
+  };
+
+@font-face {
+    font-family: 'Open Sans-Bold';
+    font-weight: 'bold';
+    src: url('font-awesome/font/OpenSans-Bold.ttf')  format('truetype') 
+  };
+
+@font-face {
+    font-family: 'Open Sans-Italic';
+    font-weight: 'italic';
+    src: url('font-awesome/font/OpenSans-Italic.ttf')  format('truetype') 
+  };
+
+@font-face {
+    font-family: 'Open Sans-Light';
+    font-weight: 'light';
+    src: url('font-awesome/font/OpenSans-Light.ttf')  format('truetype') 
+  }

@@ -13,13 +13,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Airbnb App Template - Kevin Young</title>
-    <!-- Favicon -->
+    <#-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="/o/kyoung-liferay-theme/images/favicon.ico" />
-    <!-- Font Awesome -->
+    <#-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Open Sans for body and title font -->
+    <#-- Open Sans for body and title font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
-    <!--  pt animation js   -->
+    <#--  pt animation js for header -->
     <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
 
     <@liferay_util["include"] page=top_head_include />
@@ -34,26 +34,26 @@
     <@liferay_util["include"] page=body_top_include />
 
     <@liferay.control_menu />
-    <!-- Start Header -->
+    <#-- Start Header -->
     <#if show_header>
         <header role="banner">
             <div id="home" class="flex height-fix">
                 <div id="pt" class="canvas"></div>
                 <div class="flex">
-                    <!-- Start Logo -->
+                    <#-- Start Logo -->
                     <div class="mu-logo-area">
-                        <a class="mu-logo" href="#"><img src="${site_logo}" alt="logo img ${logo_description}"></a>
+                        <a class="mu-logo" href="#"><img class="logo" src="${site_logo}" alt="logo img ${logo_description}"></a>
                     </div>
                     <#assign preferences=freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId":
                         "barebone" , "destination" : "/search" }) />
                 </div>
-                <!-- End Logo -->
+                <#-- End Logo -->
             </div>
             </div>
         </header>
 
-        <!-- End Header -->
-        <!-- Start Menu -->
+        <#-- End Header -->
+        <#-- Start Menu -->
         <button class="mu-menu-btn">
             <i class="fa fa-bars"></i>
         </button>
@@ -79,7 +79,7 @@
 								<#include "${full_templates_path}/navigation.ftl" />
 							</div>
 						</li>
-						<!--  Search Bar  -->
+						<#--  Search Bar  -->
 						<#if show_header_search>
 							<li>
 								<div id="center">
@@ -95,7 +95,7 @@
             </div>
         </div>
         </div>
-        <!-- End Menu -->
+        <#-- End Menu -->
         </header>
     </#if>
     <div class="main-container">
@@ -116,7 +116,7 @@
         </section>
     </div>
 
-    <!-- Start footer -->
+    <#-- Start footer -->
     <#if show_footer>
         <footer id="mu-footer" role="contentinfo">
             <div class="container">
@@ -129,17 +129,17 @@
     </#if>
     </div>
 
-    <!-- End footer -->
+    <#-- End footer -->
 
 
 
-    <!-- jQuery library -->
+    <#-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <!-- Custom js -->
+    <#-- Custom js -->
     <script type="text/javascript" src="/o/kyoung-liferay-theme/js/custom.js"></script>
 
-    <!-- Header Canvas -->
+    <#-- Header Canvas -->
     <script src="/o/kyoung-liferay-theme/js/canvas.js"></script>
 
     <@liferay_util["include"] page=body_bottom_include />
