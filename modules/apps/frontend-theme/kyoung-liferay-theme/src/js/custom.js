@@ -28,9 +28,7 @@
     // when click menu item overlay disappear
 
     $('.mu-menu a').on('click', function(event) {
-	   
-        // event.preventDefault();
-        
+	           
         $('.mu-menu-full-overlay').removeClass('mu-menu-full-overlay-show');
        
     });
