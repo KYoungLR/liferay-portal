@@ -15,10 +15,7 @@
     <title>Airbnb App Template - Kevin Young</title>
     <#-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="/o/kyoung-liferay-theme/images/favicon.ico" />
-    <#-- Font Awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <#-- Open Sans for body and title font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+  
     <#--  pt animation js for header -->
     <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
 
@@ -55,7 +52,6 @@
         <#-- End Header -->
         <#-- Start Menu -->
         <button class="mu-menu-btn">
-            <i class="fa fa-bars"></i>
         </button>
         <div class="mu-menu-full-overlay">
             <div class="mu-menu-full-overlay-inner">
@@ -130,11 +126,6 @@
     </div>
 
     <#-- End footer -->
-
-
-
-    <#-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <#-- Custom js -->
     <script type="text/javascript" src="/o/kyoung-liferay-theme/js/custom.js"></script>
