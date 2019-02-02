@@ -8,3 +8,33 @@ AUI().ready(
 		}
 	}
 );
+
+(function($) {
+
+    $('.menu-btn').on(
+            'click',
+            function(event) {
+                    event.preventDefault();
+
+                    $('.menu-full-overlay').addClass('menu-full-overlay-show');
+            }
+    );
+
+    $('.menu-close-btn').on(
+            'click',
+            function(event) {
+                    event.preventDefault();
+
+                    $('.menu-full-overlay').removeClass('menu-full-overlay-show');
+            }
+    );
+
+    $('.menu-nav a').on(
+            'click',
+            function(event) {
+
+                    $('.menu-full-overlay').removeClass('menu-full-overlay-show');
+            }
+    );
+
+})(jQuery);

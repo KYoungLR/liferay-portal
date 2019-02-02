@@ -27,48 +27,58 @@
     <#-- Start Header -->
     <#if show_header>
         <header role="banner">
-            <div class="flex height-fix" id="home">
+            <div class="flex height-fix home">
                 <div class="canvas" id="pt" ></div>
-				<#-- Start Logo -->
+				        <#-- Start Logo -->
                 <div class="flex">
-                    <div class="mu-logo-area">
-                        <a class="mu-logo" href="#" alt="logo"><img class="logo" alt="img logo ${logo_description}" src="${site_logo}"></a>
+                    <div class="logo-wrapper">
+                        <a class="logo-container" alt="logo"><img class="logo" alt="${logo_description}" src="${site_logo}" /></a>
                     </div>
-                    <#assign preferences=freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId":
-                        "barebone" , "destination" : "/search" }) />
+
+                    <#assign 
+                            preferences = freeMarkerPortletPreferences.getPreferences(
+                                    {
+                                            "portletSetupPortletDecoratorId": "barebone" , 
+                                            "destination" : "/search" 
+                                            }
+                            )
+                    />
+
                 </div>
-                <#-- End Logo -->
+                        <#-- End Logo -->
             </div>
         </header>
     <#-- End Header Content -->
 
         <#-- Start Menu -->
-        <button class="mu-menu-btn">
-        </button>
-        <div class="mu-menu-full-overlay">
-            <div class="mu-menu-full-overlay-inner">
-				<a class="mu-menu-close-btn"></a>
-                <nav class="mu-menu" role="navigation">
+        <button class="menu-btn"></button>
+        <div class="menu-full-overlay">
+            <div class="menu-full-overlay-inner">
+				<a class="menu-close-btn"></a>
+                <nav class="menu-nav" role="navigation">
                     <ul>
+                        <#if show_site_name>
+                            <li>
+                                <div class="company-name">
+                                    <@liferay.language key="WELCOME TO" />
+                                    ${site_name}</div>
+                            </li>
+                        </#if>
+
 						<li>
-							<#if show_site_name>
-								<div class="company-name">Welcome To ${site_name}</div>
-							</#if>
-						</li>
-						<li>
-							<div class="user-personal-bar" id="center">
+							<div class="user-personal-bar">
 								<@liferay.user_personal_bar />
 							</div>
 						</li>
 						<li>
-							<div id="center">
+							<div>
 								<#include "${full_templates_path}/navigation.ftl" />
 							</div>
 						</li>
 						<#--  Search Bar  -->
 						<#if show_header_search>
 							<li>
-								<div id="center">
+								<div class="search-container">
 									<div class="navbar-form" role="search">
 										<@liferay.search_bar default_preferences="${preferences}" />
 									</div>
@@ -103,10 +113,11 @@
 
     <#-- Start footer -->
     <#if show_footer>
-        <footer id="mu-footer" role="contentinfo">
+        <footer id="footer" role="contentinfo">
             <div class="container">
-                <div class="mu-footer-area">
+                <div class="footer-area">
                         <@liferay.language key="powered-by" />
+
                         <a href="http://www.liferay.com" rel="external">Liferay &copy;</a>
                 </div>
             </div>
@@ -114,9 +125,6 @@
     </#if>
     </div>
     <#-- End footer -->
-
-    <#-- Custom js -->
-    <script src="/o/kyoung-liferay-theme/js/custom.js" type="text/javascript"></script>
 
     <#-- Header Canvas -->
     <script src="/o/kyoung-liferay-theme/js/canvas.js" type="text/javascript"></script>

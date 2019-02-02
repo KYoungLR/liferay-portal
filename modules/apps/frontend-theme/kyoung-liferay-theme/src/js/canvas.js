@@ -18,7 +18,8 @@ function floatySpace() {
     if (count > 150) count = 150;
     var line = new Line(0, angle).to(space.size.x, 0);
     var mouse = center.clone();
-	var r = Math.min(space.size.x, space.size.y) * 1;
+	var r = Math.min(
+        space.size.x, space.size.y) * 1;
 
     for (var i = 0; i < count; i++) {
 		var p = new Vector(Math.random() * r - Math.random() * r, Math.random() * r - Math.random() * r);
@@ -58,7 +59,7 @@ function floatySpace() {
                 }
 
 				var color = 'rgba(255,255,255,' + pts[i].brightness + ')';
-				
+
                 form.stroke(color).fill(true).line(ln);
             }
         },
@@ -80,7 +81,8 @@ function floatySpace() {
 
 floatySpace();
 
-$(window).resize(function() {
+$(window).resize(
+    function() {
     space.removeAll();
     $('canvas').remove();
     floatySpace();

@@ -1,12 +1,21 @@
 @import "components/breadcrumb";
+
 @import "components/group-item";
+
 @import "components/info-panel";
+
 @import "components/navbars";
+
 @import "components/sidebar";
+
 @import "components/splitter";
+
 @import "components/table";
+
 @import "components/widget";
+
 @import "portlet/portlet_decorators";
+
 @import "portlet/portlet_hello_world";
 
 .portlet-layout {
@@ -23,7 +32,7 @@
 
 		.portlet-title-text {
 			color: $dark-color;
-			font-weight: 600;
+			font-weight: bold;
 			line-height: 2;
 			margin-bottom: 0;
 			text-transform: uppercase;
@@ -49,39 +58,30 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top: 0;
 }
 
-.mu-logo-area {
+.logo-wrapper {
 	margin-left: -75%;
 	margin-top: -4%;
 	width: 20%;
-	z-index: 5;
+	z-index: 2;
 }
 
-.mu-logo {
-	&:hover, &:focus {
-		color: $light-color;
-	}
+.logo-container {
 	display: inline-block;
 	font-size: 45px;
 	font-weight: bold;
 	margin-top: 60px;
 
 	> .logo {
-		border: none;
+		border-width: 0;
 		max-width: 100%;
+	}
+
+	&:focus, &:hover {
+		color: $light-color;
 	}
 }
 
-.mu-menu-btn {
-	&:hover, &:focus {
-		border: 2px solid $light-color;
-	}
-
-	&:before {
-		content: '\f0c9';
-		cursor: pointer;
-		display: block;
-		font-family: FontAwesome;
-	}
+.menu-btn {
 	background-color: $bright-color;
 	border: 2px solid $light-color;
 	color: $light-color;
@@ -92,14 +92,28 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	right: 5%;
 	top: 100px;
 	z-index: 6;
+
+	&:before {
+		content: '\f0c9';
+		cursor: pointer;
+		display: block;
+		font-family: FontAwesome;
+	}
+
+	&:hover, &:focus {
+		border: 2px solid $light-color;
+	}
+
+
 }
 
-.mu-menu {
+.menu-nav {
+	letter-spacing: 15px;
+
 	ul {
 		li {
 			a {
-				&:hover,
-				&:focus {
+				&:hover, &:focus {
 					color: $bright-color;
 				}
 			}
@@ -108,12 +122,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .canvas {
-	background: url("/o/kyoung-liferay-theme/images/filler.png") center center/cover;
+	background: url($canvas-image) center center/cover;
 	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
-	width: 100vw;
+	width: 100%;
 }
 
 .flex {
@@ -123,7 +137,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	justify-content: center;
 }
 
-#home {
+.home {
 	color: #616161;
 	line-height: 11pt;
 	padding: 70px 0;
@@ -132,7 +146,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* ---------- Corner Menu ---------- */
 
-.mu-menu-close-btn {
+.menu-close-btn {
 	&:before {
 		content: '\f00d';
 		cursor: pointer;
@@ -167,7 +181,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* ---------- Menu Overlay ---------- */
 
-.mu-menu-full-overlay {
+.menu-full-overlay {
 	background-color: rgba(0, 0, 0, 1);
 	color: $light-color;
 	height: 100%;
@@ -178,18 +192,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	top: 0;
 	visibility: hidden;
 	width: 100%;
-	z-index: 9;
+	z-index: 999;
 }
 
-.mu-menu-full-overlay-show {
+.menu-full-overlay-show {
 	visibility: visible;
 }
 
-.mu-menu-full-overlay-inner {
+.menu-full-overlay-inner {
 	margin-top: 15%;
 }
 
-.mu-menu {
+.menu-nav {
 	ul {
 		li {
 			list-style: none;
@@ -225,6 +239,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	visibility: hidden;
 }
 
+.user-personal-bar {
+	padding-bottom: 60px;
+}
+
 .navbar-collapse .navbar-nav {
 	flex-direction: column;
 	font-size: 17px;
@@ -232,7 +250,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	list-style: disc;
 }
 
-#center {
+.search-container {
 	display: inline-block;
 	letter-spacing: 10px;
 }
@@ -250,6 +268,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		color: $light-color;
 		text-transform: uppercase;
 
+		&:disabled {
+			background-color: $bright-color;
+			border-color: $light-color;
+			color: $light-color;
+			text-transform: uppercase;
+		}
+
 		&:hover {
 			background-color: $light-color;
 			border-color: $bright-color;
@@ -257,12 +282,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 			text-transform: uppercase;
 		}
 
-		&:disabled {
-			background-color: $bright-color;
-			border-color: $light-color;
-			color: $light-color;
-			text-transform: uppercase;
-		}
+		
 
 		a {
 			color: $light-color;
@@ -276,10 +296,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* ---------- Footer ---------- */
 
-#mu-footer {
-	background-color: $light-color;
-	margin-top: 1rem;
+#footer {
 	background-color: $footer-bg;
+	margin-top: 1rem;
 
 	> .container {
 		padding-bottom: 3rem;
@@ -294,8 +313,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* ---------- Responsive Style ---------- */
 
-@media (max-width: 991px) {
-	.mu-menu-btn {
+@media (max-width: $screen-lg-min) {
+	.menu-btn {
 		right: 5%;
 	}
 
@@ -304,33 +323,31 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 }
 
-@media (max-width: 767px) {
-	.mu-logo {
+@media (max-width: $screen-md-min) {
+	.company-name {
+		font-size: 25px;
+	}
+	
+	.logo-container {
 		margin-top: 25px;
 	}
 
-	.mu-menu-btn {
+	.menu-btn {
 		font-size: 20px;
 		padding: 5px 12px;
 		top: 60px;
 	}
-}
 
-@media (max-width: 640px) {
-	.company-name {
-		font-size: 25px;
-	}
-
-	.mu-menu-close-btn {
+	.menu-close-btn {
 		&:before {
 			font-size: 20px;
 			top: 30px;
 		}
 	}
 
-	.mu-menu ul li a {
+	.menu-nav ul li a {
+		font-family: 'Open Sans-Light';
 		font-size: 20px;
-		font-weight: 300;
 		line-height: 1;
 	}
 
@@ -339,8 +356,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 }
 
-@media (max-width: 480px) {
-	.mu-menu-close-btn {
+@media (max-width: $screen-sm-min) {
+	.menu-close-btn {
 		&:before {
 			right: 5%;
 			top: 20px;
