@@ -261,8 +261,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top: 20px;
 }
 
-.btn-group, .button-holder, .portlet-body {
-	button, select, .btn, .btn-default, .btn-primary {
+.btn-group, .button-holder, .portlet-body, .dropdown {
+	button, select, .btn, .btn-default, .btn-primary, .management-bar-light .navbar-nav .btn-unstyled {
 		background-color: $bright-color;
 		border-color: $light-color;
 		color: $light-color;
@@ -282,13 +282,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 			text-transform: uppercase;
 		}
 
-		
-
 		a {
 			color: $light-color;
 		}
 	}
 }
+
+.child-menu {
+	margin-left: 45%;
+
+	.dropdown-item {
+		color: $bright-color;
+	}
+}
+
 
 .portlet-title-text {
 	overflow: visible;
@@ -364,3 +371,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		}
 	}
 }
+
+
+
