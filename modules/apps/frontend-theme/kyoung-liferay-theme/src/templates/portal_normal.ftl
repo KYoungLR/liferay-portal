@@ -11,6 +11,9 @@
     <#--  font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Bootstrap -->
+    <link href="/o/kyoung-liferay-theme/css/bootstrap.min.css" rel="stylesheet">
+
     <#--  pt animation js for header -->
     <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
 
@@ -133,8 +136,17 @@
     </div>
     <#-- End footer -->
 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="/o/kyoung-liferay-theme/js/bootstrap.min.js"></script>
+
     <#-- Header Canvas -->
     <script src="/o/kyoung-liferay-theme/js/canvas.js" type="text/javascript"></script>
+
+    <#-- Mainn JS -->
+    <script src="/o/kyoung-liferay-theme/js/main.js" type="text/javascript"></script>
  
     <@liferay_util["include"] page=body_bottom_include />
 
@@ -143,4 +155,3 @@
 </body>
 
 </html>
-
