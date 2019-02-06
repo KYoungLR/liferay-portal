@@ -8,9 +8,19 @@
     <title>${the_title} - ${company_name}</title>
 
     <meta content="initial-scale=1.0, width=device-width" name="viewport" />
+    <#--  font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <#--  pt animation js for header -->
     <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
+
+    <#-- Slick slider -->
+    <link href="/o/kyoung-liferay-theme/css/slick/slick.css" rel="stylesheet">
+    
+    <#--  Alloy UI  -->
+    <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+    <link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet">
+
 
     <@liferay_util["include"] page=top_head_include />
 
@@ -111,6 +121,64 @@
         </section>
     </div>
 
+
+<!-- Start Apps Screenshot -->
+		<section id="apps-screenshot">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="apps-screenshot-area">
+
+							<div class="title-area">
+								<h2 class="title">APPS SCREENSHOT</h2>
+								<span class="title-dot"></span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis unde, ut sapiente et voluptatum facilis consectetur incidunt provident asperiores at necessitatibus nulla sequi voluptas libero quasi explicabo veritatis minima porro.</p>
+							</div>
+
+
+							<!-- Start Apps Screenshot Content -->
+							<div class="apps-screenshot-content">
+
+								<div class="apps-screenshot-slider">
+
+									<div class="single-screeshot">
+										<img src="/o/kyoung-liferay-theme/images/screenshot/01.jpg" alt="App screenshot img">
+									</div>
+
+									<div class="single-screeshot">
+										<img src="/o/kyoung-liferay-theme/images/screenshot/01.jpg" alt="App screenshot img">
+									</div>
+
+									<div class="single-screeshot">
+										<img src="/o/kyoung-liferay-theme/images/screenshot/01.jpg" alt="App screenshot img">
+									</div>
+
+									<div class="single-screeshot">
+										<img src="/o/kyoung-liferay-theme/images/screenshot/01.jpg" alt="App screenshot img">
+									</div>
+
+									<div class="single-screeshot">
+										<img src="/o/kyoung-liferay-theme/images/screenshot/01.jpg" alt="App screenshot img">
+									</div>
+
+									<div class="single-screeshot">
+										<img src="/o/kyoung-liferay-theme/images/screenshot/01.jpg" alt="App screenshot img">
+									</div>
+
+						
+
+								</div>
+
+							</div>
+							<!-- End Apps Screenshot Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Apps Screenshot -->
+
     <#-- Start footer -->
     <#if show_footer>
         <footer id="footer" role="contentinfo">
@@ -126,8 +194,23 @@
     </div>
     <#-- End footer -->
 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <#-- Header Canvas -->
     <script src="/o/kyoung-liferay-theme/js/canvas.js" type="text/javascript"></script>
+
+ <!-- Bootstrap -->
+    <script src="/o/kyoung-liferay-theme/js/bootstrap.min.js"></script>
+
+    <#-- Slick slider -->
+    <script src="/o/kyoung-liferay-theme/js/slick.min.js" type="text/javascript"></script>
+
+    <#-- Slick slider js -->
+    <script src="/o/kyoung-liferay-theme/js/main.js" type="text/javascript"></script>
+
+    
+   
 
     <@liferay_util["include"] page=body_bottom_include />
 
@@ -136,3 +219,4 @@
 </body>
 
 </html>
+

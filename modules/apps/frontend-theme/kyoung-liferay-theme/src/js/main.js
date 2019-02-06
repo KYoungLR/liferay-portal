@@ -38,3 +38,94 @@ AUI().ready(
     );
 
 })(jQuery);
+
+
+// Alloy Carousel
+YUI().use(
+	'aui-carousel',
+	function(Y) {
+	  new Y.Carousel(
+		{
+		  contentBox: '#myCarousel',
+		  height: 600,
+		  width: 300,
+		  left: '38%'
+		}
+	  ).render();
+	}
+  );
+
+
+
+
+/* ----------------------------------------------------------- */
+	/*  3. VIDEO POPUP
+	/* ----------------------------------------------------------- */
+
+	$('.video-play-btn').on('click', function(event) {
+	   
+        event.preventDefault();
+        
+        $('.video-iframe-area').addClass('video-iframe-display');
+       
+    });
+   
+    // when click the close btn
+
+    // disappear iframe window
+    
+    $('.video-close-btn').on('click', function(event) {
+	    
+	    event.preventDefault();
+	    
+		$('.video-iframe-area').removeClass('video-iframe-display');
+		
+    });
+
+    // stop iframe if it is play while close the iframe window
+
+    $('.video-close-btn').click(function(){
+
+        $('.video-iframe').attr('src', $('.video-iframe').attr('src'));
+
+    });
+
+    // when click overlay area
+
+     $('.video-iframe-area').on('click', function(event) {
+	    
+	    event.preventDefault();
+	    
+		$('.video-iframe-area').removeClass('video-iframe-display');
+		
+    });
+
+	$('.video-iframe-area, .video-iframe').on('click', function(e){
+	    e.stopPropagation();
+	});
+
+
+
+		/* ----------------------------------------------------------- */
+	/*  4. APPS SCREENSHOT SLIDEER ( SLICK SLIDER )
+	/* ----------------------------------------------------------- */
+
+	$('.apps-screenshot-slider').slick({
+		slidesToShow: 4,
+		responsive: [
+		  {
+			breakpoint: 768,
+			settings: {
+			  arrows: true,
+			  slidesToShow: 3
+			}
+		  },
+		  {
+			breakpoint: 480,
+			settings: {
+			  arrows: true,
+			  slidesToShow: 1
+			}
+		  }
+		]
+	  });
