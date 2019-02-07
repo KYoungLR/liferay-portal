@@ -519,6 +519,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .title-dot {
+	background-color: $bright-color;
 	border-radius: 50%;
 	height: 8px;
 	width: 8px;
@@ -528,6 +529,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .title-dot::before {
+	background-color: $bright-color;
+
 	content: '';
 	position: absolute;
 	left: 15px;
@@ -537,6 +540,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .title-dot::after {
+	background-color: $bright-color;
+
 	content: '';
 	position: absolute;
 	right: 15px;
@@ -783,7 +788,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .faq-area {
 	display: inline;
 	float: left;
-	padding: 150px 0;
+	padding: 60px 0;
 	width: 100%;
 }
 
@@ -806,24 +811,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	background-color: #fff;
 	border-color: #ddd;
 	padding: 0;
-
 }
 
-.faq-content .panel-default > .panel-heading + .panel-collapse > .panel-body {
+.panel-body {
 	text-align: left;
 }
-
 
 .faq-content .panel-title {
 	text-align: left;
-}
 
-.faq-content .panel-title a {
-	display: block;
-	padding: 12px 15px;
-	-webkit-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+	a {
+		color: $dark-color;
+		display: block;
+		padding: 12px 15px;
+		-webkit-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		transition: all 0.5s;
+	}
 
 	> span {
 		margin-right: 5px;
@@ -842,6 +846,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	border-top-color: #ff5a60;
 }
 
+.panel-group .panel {
+    margin-bottom: 15px;
+}
+
+.fa-minus, .fa-plus {
+	color: $bright-color;
+}
 
 /*--------------------*/
 /* CONTACT US */
