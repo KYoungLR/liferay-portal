@@ -62,10 +62,15 @@ h6 {
 	font-size: 18px;  
 }
 
+a {
+	&:hover { 
+		color: $bright-color;
+	}
+}
+
 .logo-wrapper {
-	margin-left: -75%;
 	margin-top: -4%;
-	width: 20%;
+	max-width: 300px;
 	z-index: 2;
 }
 
@@ -209,19 +214,62 @@ h6 {
 
 .menu-nav {
 	ul {
-		li {
-			list-style: none;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+	  }
+	  ul:hover {
+		overflow: visible;
+	  }
+	  li {
+		position: relative;
 
-			a {
-				color: $light-color;
-				display: inline-block;
-				font-size: 35px;
-				font-weight: bold;
-				line-height: 1.35;
-				text-align: center;
-				text-transform: uppercase;
-			}
+		a {
+			color: $light-color;
+			display: inline-block;
+			font-size: 35px;
+			font-weight: bold;
+			line-height: 1.35;
+			text-align: center;
+			text-transform: uppercase;
 		}
+	  }
+
+	  a {
+		display: block;
+		padding: 10px 20px;
+		color: #fff;
+		font-weight: bold;
+		text-decoration: none;
+	  }
+	  
+	  /* second level */
+	  ul ul {
+		transition: max-height 1s;
+	  }
+	  ul li:hover > ul {
+		max-height: 999px;
+	  }
+	  ul ul li {
+		float: none;
+	  }
+	  
+	  /* third level */
+	  ul ul ul {
+	    top: 60;
+		height: 0;
+		width: 100%;
+		left: 15%;
+		transition: width 0.5s;
+	  }
+	  ul ul li:hover > ul {
+		height: 100%;
+	  }
+	
+	.sign-in {
+		font-size: 20px;
+		text-decoration: underline;
 	}
 }
 
@@ -232,11 +280,6 @@ h6 {
 
 .user-avatar-image {
 	display: none;
-}
-
-.sign-in {
-	font-size: 20px;
-	text-decoration: underline;
 }
 
 .navbar-toggler {
@@ -1135,7 +1178,7 @@ h6 {
 	z-index: 1;
 	-webkit-transform: scale(0.6) translateY(-2rem);
 	transform: scale(0.6) translateY(-2rem);
-	opacity: 0;
+	opacity: 0.3;
 	cursor: pointer;
 	pointer-events: none;
 	background: #2e5266;
@@ -1254,9 +1297,15 @@ h6 {
 	width: 100%;
 }
 
-.apps-screenshot-content{
+.apps-screenshot-content {
 	display: inline;
 	float: left;
 	margin-top: 50px;
 	width: 100%;
 }
+
+.apps-screenshot-slider {
+	margin-left: 135px;
+}
+
+

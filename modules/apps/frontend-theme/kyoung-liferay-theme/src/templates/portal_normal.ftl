@@ -146,7 +146,7 @@
     <script src="/o/kyoung-liferay-theme/js/canvas.js" type="text/javascript"></script>
 
     <#-- Mainn JS -->
-    <script src="/o/kyoung-liferay-theme/js/main.js" type="text/javascript"></script>
+    <#--  <script src="/o/kyoung-liferay-theme/js/main.js" type="text/javascript"></script>  -->
  
     <@liferay_util["include"] page=body_bottom_include />
 
