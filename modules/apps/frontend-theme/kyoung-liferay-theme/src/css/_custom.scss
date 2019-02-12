@@ -811,6 +811,9 @@ a {
 	display: block;
 }
 
+.kyTooltip {
+	position: fixed;
+}
 
 /*--------------------*/
 /* DOWNLOAD */
@@ -905,6 +908,7 @@ a {
 
 .faq-content .panel-title {
 	text-align: left;
+	margin-bottom: 5px;
 
 	a {
 		color: $dark-color;
@@ -929,11 +933,12 @@ a {
 }
 
 .faq-content .panel-default > .panel-heading + .panel-collapse > .panel-body {
-	border-top-color: #ff5a60;
+	background-color: $light-color;
+	border-top: 1px solid $bright-color;
 }
 
 .panel-group .panel {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .fa-minus, .fa-plus {
@@ -956,6 +961,10 @@ a {
 	float: left;
 	padding: 100px 0;
 	width: 100%;
+}
+
+.contact-form-logo-area {
+	margin-top: -300px;
 }
 
 .contact-header {
@@ -1157,6 +1166,26 @@ a {
 
 #column-2 {
 	margin-right: -8%;
+}
+
+#column-3 {
+	margin-top: -90px;
+}
+
+.ddm-form-basic-info {
+	display: none;
+}
+
+.lfr-ddm-form-page-title {
+	display: none;
+}
+
+.portlet-header {
+	display: none;
+}
+
+.ddm-from-builder-app {
+	margin-top: -120px;
 }
 
 

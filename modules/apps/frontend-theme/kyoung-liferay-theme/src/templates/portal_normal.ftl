@@ -11,8 +11,6 @@
     <#--  font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Bootstrap -->
-    <#--  <link href="/o/kyoung-liferay-theme/css/bootstrap.min.css" rel="stylesheet">  -->
 
     <#--  pt animation js for header -->
     <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
@@ -125,10 +123,10 @@
     <#if show_footer>
         <footer id="footer" role="contentinfo">
             <div class="container">
-                <div class="footer-area">
+                <div class="footer-area" >
                         <@liferay.language key="powered-by" />
 
-                        <a href="http://www.liferay.com" rel="external">Liferay &copy;</a>
+                        <a href="http://www.liferay.com" rel="external" id='kyTooptip' title="Check out our site">Liferay &copy;</a>
                 </div>
             </div>
         </footer>
@@ -139,15 +137,12 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <!-- Bootstrap -->
-    <#--  <script src="/o/kyoung-liferay-theme/js/bootstrap.min.js"></script>  -->
-
     <#-- Header Canvas -->
     <script src="/o/kyoung-liferay-theme/js/canvas.js" type="text/javascript"></script>
-
-    <#-- Mainn JS -->
+    
+    <#-- Main JS post load -->
     <#--  <script src="/o/kyoung-liferay-theme/js/main.js" type="text/javascript"></script>  -->
- 
+
     <@liferay_util["include"] page=body_bottom_include />
 
     <@liferay_util["include"] page=bottom_include />

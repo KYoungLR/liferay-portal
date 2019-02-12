@@ -9,6 +9,18 @@ AUI().ready(
 	}
 );
 
+YUI().use(
+	'aui-tooltip',
+	function(Y) {
+	  new Y.TooltipDelegate(
+		{
+		position: 'bottom',
+		trigger: '#kyTooltip'
+		}
+	  );
+	}
+  );
+
 (function($) {
 
     $('.menu-btn').on(
@@ -178,8 +190,8 @@ AUI().ready(
 		$('.active').next().trigger('click');
 	  }
 	});
-
-
-			
-		
 })(jQuery);
+
+
+
+  
