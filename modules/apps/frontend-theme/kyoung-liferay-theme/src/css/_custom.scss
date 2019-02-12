@@ -239,7 +239,7 @@ a {
 	  a {
 		display: block;
 		padding: 10px 20px;
-		color: #fff;
+		color: $light-color;
 		font-weight: bold;
 		text-decoration: none;
 	  }
@@ -427,20 +427,18 @@ a {
 	width: 100%;
 }
 
+.header-featured-content {
+	display: inline;
+	float: right;
+	text-align: center;
+	width: 60%;
+}
+
 .header-featured-img {
 	display: inline;
 	float: left;
 	width: 40%;
 }
-
-.header-featured-content {
-	display: inline;
-	float: right;
-	/* margin-top: 200px; */
-	text-align: center;
-	width: 60%;
-}
-
 
 .portlet-layout {
 	margin: 0;
@@ -458,7 +456,7 @@ a {
 		.header-featured-content {
 			h1 {
 				p {
-					color: #fff;
+					color: $light-color;
 					font-size: 45px;
 					font-weight: 300;
 					margin-bottom: 15px;
@@ -466,7 +464,7 @@ a {
 			}
 			
 			p {
-				color: #fff;
+				color: $light-color;
 				font-size: 15px;
 				margin-bottom: 15px;
 			}
@@ -482,27 +480,6 @@ a {
 	}
 }
 
-// .portlet {
-// 	margin: -13px;
-// 	.header-featured-content {
-// 		h1 {
-// 			p {
-// 				color: #fff;
-// 				font-size: 45px;
-// 				font-weight: 300;
-// 				margin-bottom: 15px;
-// 			}
-// 		}
-		
-// 		p {
-// 			color: #fff;
-// 			font-size: 15px;
-// 			margin-bottom: 15px;
-// 		}
-	 
-// 	}
-// }
-
 .header-featured-content h1 span {
 	font-weight: 700;
 }
@@ -512,58 +489,41 @@ a {
 	float: left;
 	margin-top: 50px;
 	width: 100%;
+
+	h4 {
+		color: $light-color;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 20px;
+	}
 }
 
-.app-download-area h4 {
-	color: #fff;
-	font-size: 18px;
-	font-weight: 300;
-	margin-bottom: 20px;
-}
-
-.apple-btn,
-.google-btn,
-.windows-btn {
-	border: 2px solid #fff;
+.social-btn {
+	border: 2px solid $light-color;
     border-radius: 50px;
-    color: #fff;
+    color: $light-color;
     display: inline-block;
     margin: 0 10px;
     padding: 11px 22px;
     text-transform: uppercase;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
-    transition: all 0.5s;
+	transition: all 0.5s;
+
+	i {
+		display: block;
+		float: left;
+		font-size: 20px;
+		line-height: 24px;
+		margin-right: 10px;
+	}
+
+	span {
+		display: block;
+		float: left;
+		line-height: 24px;
+	}
 }
-
-.apple-btn:hover,
-.google-btn:hover,
-.windows-btn:hover,
-.apple-btn:focus,
-.google-btn:focus,
-.windows-btn:focus {
-	background-color: #ffffff;
-}
-
-.apple-btn i,
-.google-btn i,
-.windows-btn i {
-	display: block;
-    float: left;
-    font-size: 20px;
-    line-height: 24px;
-    margin-right: 10px;
-}
-
-.apple-btn span,
-.google-btn span,
-.windows-btn span {
-	display: block;
-	float: left;
-	line-height: 24px;
-}
-
-
 
 /*--------------------*/
 /* FEATURE SECTION */
@@ -571,7 +531,7 @@ a {
 
 
 #feature {
-	background-color: #fff;
+	background-color: $light-color;
 	display: inline;
 	float: left;
 	width: 100%;
@@ -607,37 +567,36 @@ a {
 .title-dot {
 	background-color: $bright-color;
 	border-radius: 50%;
-	height: 8px;
-	width: 8px;
 	display: inline-block;
+	height: 8px;
 	margin-bottom: 20px;
 	position: relative;
+	width: 8px;
 }
 
 .title-dot::before {
 	background-color: $bright-color;
-
 	content: '';
-	position: absolute;
-	left: 15px;
 	height: 3px;
-	width: 50px;
+	position: absolute;
+	right: 15px;
 	top: 2px;
+	width: 50px;
 }
 
 .title-dot::after {
 	background-color: $bright-color;
-
 	content: '';
+	height: 3px;
 	position: absolute;
 	right: 15px;
-	height: 3px;
-	width: 50px;
 	top: 2px;
+	width: 50px;
 }
 
+
 .feature-content {
-	background-color: #fff;
+	background-color: $light-color;
 	display: inline;
 	float: left;
 	margin-top: 30px;
@@ -662,17 +621,17 @@ a {
 }
 
 .feature-btn {
-	color: #fff;
+	color: $light-color;
 	font-size: 18px;
 }
 
 .feature-btn:hover {
-	color: #fff;
+	color: $light-color;
 }
 
 .feature-content-right .media {
 	margin-top: 15px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid $border-color;
 	margin-bottom: 20px;
 	padding-bottom: 20px;
 	-webkit-transition: all 0.5s;
@@ -730,7 +689,7 @@ a {
 }
 
 .video-area h2 {
-	color: #fff;
+	color: $light-color;
 }
 
 .video-content {
@@ -741,9 +700,9 @@ a {
 
 .video-play-btn,
 .video-close-btn {
-	color: #fff;
+	color: $light-color;
 	font-size: 22px;
-	border: 2px solid #fff;
+	border: 2px solid $light-color;
 	border-radius: 50%;
 	width: 60px;
 	display: inline-block;
@@ -758,16 +717,16 @@ a {
 
 .video-play-btn:hover,
 .video-play-btn:focus {
-	color: #fff;
+	color: $light-color;
 	-webkit-transform: scale(1.2);
 	        transform: scale(1.2);
 }
 
 .video-close-btn {
 	border-radius: 50%;
-	color: #fff;
+	color: $light-color;
 	font-size: 18px;
-	border: 2px solid #fff;
+	border: 2px solid $light-color;
 	position: absolute;
 	top: 0;
 	right: 15%;
@@ -784,7 +743,7 @@ a {
 
 .video-close-btn:hover,
 .video-close-btn:focus {
-	color: #fff;
+	color: $light-color;
 	-webkit-transform: scale(1.2);
 	        transform: scale(1.2);
 }
@@ -850,7 +809,7 @@ a {
 
 .download-area .title,
 .download-area p {
-	color: #fff;
+	color: $light-color;
 }
 
 .download-content {
@@ -891,14 +850,14 @@ a {
 }
 
 .faq-content .panel-default {
-	border-color: #fff;
+	border-color: $light-color;
 	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.06);
 }
 
 .faq-content .panel-default > .panel-heading {
 	color: #333;
-	background-color: #fff;
-	border-color: #ddd;
+	background-color: $light-color;
+	border-color: $border-color;
 	padding: 0;
 }
 
@@ -950,7 +909,7 @@ a {
 /*--------------------*/
 
 #contact {
-	background-color: #fff;
+	background-color: $light-color;
 	display: inline;
 	float: left;
 	width: 100%;
@@ -1052,7 +1011,7 @@ a {
 }
 
 .contact-form .form-control:focus {
-	background-color: #fff;
+	background-color: $light-color;
     outline: 0;
     box-shadow: none;    
 } 
@@ -1111,7 +1070,7 @@ a {
 
 #form-messages {
 	margin-bottom: 10px;
-    background-color: #fff;
+    background-color: $light-color;
 }
 
 .success {
@@ -1256,7 +1215,7 @@ a {
 	transform: translateX(-50%) translateY(-50%);
 	font-size: 3rem;
 	font-weight: 300;
-	color: #fff;
+	color: $light-color;
   }
   
   .card-carousel .my-card:nth-child(1):before {
@@ -1267,7 +1226,7 @@ a {
 	transform: translateX(-50%) translateY(-50%);
 	font-size: 3rem;
 	font-weight: 300;
-	color: #fff;
+	color: $light-color;
   }
   
   .card-carousel .my-card:nth-child(2):before {
@@ -1278,7 +1237,7 @@ a {
 	transform: translateX(-50%) translateY(-50%);
 	font-size: 3rem;
 	font-weight: 300;
-	color: #fff;
+	color: $light-color;
   }
   
   .card-carousel .my-card:nth-child(3):before {
@@ -1289,7 +1248,7 @@ a {
 	transform: translateX(-50%) translateY(-50%);
 	font-size: 3rem;
 	font-weight: 300;
-	color: #fff;
+	color: $light-color;
   }
   
   .card-carousel .my-card:nth-child(4):before {
@@ -1300,7 +1259,7 @@ a {
 	transform: translateX(-50%) translateY(-50%);
 	font-size: 3rem;
 	font-weight: 300;
-	color: #fff;
+	color: $light-color;
   }
 
 
@@ -1313,7 +1272,7 @@ a {
 
 
 #apps-screenshot {
-	background-color: #fff;
+	background-color: $light-color;
 	display: inline;
 	float: left;
 	width: 100%;
