@@ -1045,26 +1045,39 @@ a {
 	}
 }
 
-.contact-form .form-control:focus {
+.contact-form {
+	.form-control:focus {
 	background-color: $light-color;
     outline: 0;
-    box-shadow: none;    
+	box-shadow: none;   
+	} 
 } 
 
-.contact-form .form-control::-webkit-input-placeholder {
-	color: $placeholder-color;
-	font-size: 15px;
+.contact-form {
+	.form-control::-webkit-input-placeholder {
+		color: $placeholder-color;
+		font-size: 15px;
+	}
 }
 
-.contact-form .form-control:-ms-input-placeholder {  
-	color: $placeholder-color;
-	font-size: 15px;
+.contact-form {
+	.form-control:-ms-input-placeholder {  
+		color: $placeholder-color;
+		font-size: 15px;
+	}
 }
 
-.contact-form .button-default::after,
-.contact-form .button-default > span {
-	padding: 12px 40px;  
+.contact-form {
+	.button-default::after {
+		padding: 12px 40px;  
+	}
+ 	.button-default {
+		> span {
+			padding: 12px 40px;  
+		}
+	}
 }
+
 
 .social-media {
 	display: inline;
@@ -1143,10 +1156,12 @@ a {
 	}
 }
 
-.contact-form .form-control:focus {
-	border: 1px solid $bright-color;    
+.contact-form, .input-group {
+	.form-control:focus {
+		border: 1px solid $bright-color;    
+		background-color: transparent;
+	}
 } 
-
 
 #column-2 {
 	margin-right: -8%;
@@ -1172,7 +1187,7 @@ a {
 	 
 	.lfr-ddm-form-page {
 
-		>.row {
+		> .row {
 			margin-left: 0;
 			margin-right: 0
 		}
@@ -1193,113 +1208,65 @@ a {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-  }
-  
-  .card-carousel .my-card {
-	height: 20rem;
-	width: 12rem;
-	position: relative;
-	z-index: 1;
-	-webkit-transform: scale(0.6) translateY(-2rem);
-	transform: scale(0.6) translateY(-2rem);
-	opacity: 0.3;
-	cursor: pointer;
-	pointer-events: none;
-	background: #2e5266;
-	background: linear-gradient(to top, #2e5266, #6e8898);
-	transition: 1s;
-  }
-  
-  .card-carousel .my-card:after {
-	content: '';
-	position: absolute;
-	height: 2px;
-	width: 100%;
-	border-radius: 100%;
-	background-color: rgba(0,0,0,0.3);
-	bottom: -5rem;
-	-webkit-filter: blur(4px);
-	filter: blur(4px);
-  }
-  
-  .card-carousel .my-card.active {
-	z-index: 3;
-	-webkit-transform: scale(1) translateY(0) translateX(0);
-	transform: scale(1) translateY(0) translateX(0);
-	opacity: 1;
-	pointer-events: auto;
-	transition: 1s;
-  }
-  
-  .card-carousel .my-card.prev, .card-carousel .my-card.next {
-	z-index: 2;
-	-webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
-	transform: scale(0.8) translateY(-1rem) translateX(0);
-	opacity: 0.6;
-	pointer-events: auto;
-	transition: 1s;
-  }
 
+		.my-card {
+			height: 20rem;
+			width: 12rem;
+			position: relative;
+			z-index: 1;
+			-webkit-transform: scale(0.6) translateY(-2rem);
+			transform: scale(0.6) translateY(-2rem);
+			opacity: 0.3;
+			cursor: pointer;
+			pointer-events: none;
+			background: #2e5266;
+			background: linear-gradient(to top, #2e5266, #6e8898);
+			transition: 1s;
 
+			&:after {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 100%;
+				border-radius: 100%;
+				background-color: rgba(0,0,0,0.3);
+				bottom: -5rem;
+				-webkit-filter: blur(4px);
+				filter: blur(4px);
+			}
 
-  /* OWN CSS */
-  .card-carousel .my-card:nth-child(0):before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	font-size: 3rem;
-	font-weight: 300;
-	color: $light-color;
-  }
-  
-  .card-carousel .my-card:nth-child(1):before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	font-size: 3rem;
-	font-weight: 300;
-	color: $light-color;
-  }
-  
-  .card-carousel .my-card:nth-child(2):before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	font-size: 3rem;
-	font-weight: 300;
-	color: $light-color;
-  }
-  
-  .card-carousel .my-card:nth-child(3):before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	font-size: 3rem;
-	font-weight: 300;
-	color: $light-color;
-  }
-  
-  .card-carousel .my-card:nth-child(4):before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	font-size: 3rem;
-	font-weight: 300;
-	color: $light-color;
-  }
+			> * {
+				&:before {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translateX(-50%) translateY(-50%);
+					transform: translateX(-50%) translateY(-50%);
+					font-size: 3rem;
+					font-weight: 300;
+					color: $light-color;
+				}
+			}
+		}
 
-
-
+	.my-card.active {
+		z-index: 3;
+		-webkit-transform: scale(1) translateY(0) translateX(0);
+		transform: scale(1) translateY(0) translateX(0);
+		opacity: 1;
+		pointer-events: auto;
+		transition: 1s;
+	}
+	
+	.my-card.prev, .my-card.next {
+		z-index: 2;
+		-webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+		transform: scale(0.8) translateY(-1rem) translateX(0);
+		opacity: 0.6;
+		pointer-events: auto;
+		transition: 1s;
+	}  
+}
 
 
   /*--------------------*/
@@ -1329,7 +1296,7 @@ a {
 }
 
 .apps-screenshot-slider {
-	margin-left: 135px;
+	margin-left: -4%;
 }
 
 
