@@ -379,14 +379,49 @@ a {
 		right: 5%;
 	}
 
-	.mu-title-area {
-		padding: 0 50px;
+	.video-iframe-area {
+		padding: 16% 5%;
+
+		iframe {
+			width: 100%;
+		}
+	}
+
+	.container {
+		.title-area {
+			padding: 0 50px;
+		}
+	}
+		
+	.faq-area {
+		.faq-content {
+			padding: 0 0px;
+		}
+	}
+
+	.contact-right {
+		margin-top: 50px;
 	}
 }
 
 @media (max-width: $screen-md-min) {
+	.app-download-area {
+		margin-top: 20px;
+		}
+	}
+
 	.company-name {
 		font-size: 25px;
+	}
+
+	.faq-area {
+		.faq-content {
+			padding: 0 0px;
+		}
+	}
+
+	.header-featured-content h1 {
+		font-size: 35px;
 	}
 	
 	.logo-container {
@@ -412,138 +447,39 @@ a {
 		line-height: 1;
 	}
 
-	.mu-title-area {
-		padding: 0;
+	.social-btn {
+		margin-bottom: 10px;
 	}
-}
 
+	.container {
+		.title-area {
+			padding: 0 0px;
+		}
+	}
+	
 @media (max-width: $screen-sm-min) {
 	.menu-close-btn {
+		top: 2%;
+		right: 5%;
+		height: 40px;
+		line-height: 35px;
+		width: 40px;
+
 		&:before {
 			right: 5%;
 			top: 20px;
 		}
 	}
-}
 
-
-
-/*=== Featured section ===*/
-
-.header-featured-area {
-	background-color: $bright-color;
-	display: inline;
-	float: left;
-	padding: 50px 0;
-	width: 100%;
-}
-
-.header-featured-content {
-	display: inline;
-	float: right;
-	text-align: center;
-	width: 60%;
-}
-
-.header-featured-img {
-	display: inline;
-	float: left;
-	width: 40%;
-}
-
-.portlet-layout {
-	margin: 0;
-	width: 100%;
-
-	.portlet {
-		margin: -13px;
-
-		.h1, .h2, .h3, .h4, .h5, .h6 {
-			color: $dark-color;
-			letter-spacing: 1;
-			text-transform: uppercase;
-		}
-
-		.header-featured-content {
-			h1 {
-				p {
-					color: $light-color;
-					font-size: 45px;
-					font-weight: 300;
-					margin-bottom: 15px;
-				}
-			}
-			
-			p {
-				color: $light-color;
-				font-size: 15px;
-				margin-bottom: 15px;
-			}
-
-		.portlet-title-text {
-			color: $dark-color;
-			font-weight: bold;
-			line-height: 2;
-			margin-bottom: 0;
-			text-transform: uppercase;
-			}
+	.video-iframe-area {
+		padding: 10% 5%;
+		iframe {
+			height: 250px;
 		}
 	}
 }
 
-.header-featured-content h1 span {
-	font-weight: 700;
-}
-
-.app-download-area {
-	display: inline;
-	float: left;
-	margin-top: 50px;
-	width: 100%;
-
-	h4 {
-		color: $light-color;
-		font-size: 18px;
-		font-weight: 300;
-		margin-bottom: 20px;
-	}
-}
-
-.social-btn {
-	border: 2px solid $light-color;
-    border-radius: 50px;
-    color: $light-color;
-    display: inline-block;
-    margin: 0 10px;
-    padding: 11px 22px;
-    text-transform: uppercase;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-	transition: all 0.5s;
-
-	i {
-		display: block;
-		float: left;
-		font-size: 20px;
-		line-height: 24px;
-		margin-right: 10px;
-	}
-
-	span {
-		display: block;
-		float: left;
-		line-height: 24px;
-	}
-
-	&:hover {
-		background-color: $light-color;
-		border: 1px solid $bright-color;
-	}
-}
-
-/*--------------------*/
-/* FEATURE SECTION */
-/*--------------------*/
+/* ---------- Featured Section ---------- */
 
 
 #feature {
@@ -669,6 +605,117 @@ a {
 
 	&:hover {
 		color: $light-color;
+	}
+}
+
+.header-featured-area {
+	background-color: $bright-color;
+	display: inline;
+	float: left;
+	padding: 50px 0;
+	width: 100%;
+}
+
+.header-featured-content {
+	display: inline;
+	float: right;
+	text-align: center;
+	width: 60%;
+}
+
+.header-featured-img {
+	display: inline;
+	float: left;
+	width: 40%;
+}
+
+.portlet-layout {
+	margin: 0;
+	width: 100%;
+
+	.portlet {
+		margin: -13px;
+
+		.h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $dark-color;
+			letter-spacing: 1;
+			text-transform: uppercase;
+		}
+
+		.header-featured-content {
+			h1 {
+				p {
+					color: $light-color;
+					font-size: 45px;
+					font-weight: 300;
+					margin-bottom: 15px;
+				}
+			}
+			
+			p {
+				color: $light-color;
+				font-size: 15px;
+				margin-bottom: 15px;
+			}
+
+		.portlet-title-text {
+			color: $dark-color;
+			font-weight: bold;
+			line-height: 2;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.header-featured-content h1 span {
+	font-weight: 700;
+}
+
+.app-download-area {
+	display: inline;
+	float: left;
+	margin-top: 50px;
+	width: 100%;
+
+	h4 {
+		color: $light-color;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 20px;
+	}
+}
+
+.social-btn {
+	border: 2px solid $light-color;
+    border-radius: 50px;
+    color: $light-color;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 11px 22px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+	transition: all 0.5s;
+
+	i {
+		display: block;
+		float: left;
+		font-size: 20px;
+		line-height: 24px;
+		margin-right: 10px;
+	}
+
+	span {
+		display: block;
+		float: left;
+		line-height: 24px;
+	}
+
+	&:hover {
+		background-color: $light-color;
+		border: 1px solid $bright-color;
 	}
 }
 
@@ -835,7 +882,7 @@ a {
 /*--------------------*/
 
 #faq {
-	background-color: #f8f8f8;
+	background-color: $footer-bg;
 	display: inline;
 	float: left;
 	position: relative;
@@ -1045,7 +1092,7 @@ a {
 	}
 }
 
-.contact-form {
+.contact-form, .lfr-ddm-form-field-container {
 	.form-control:focus {
 	background-color: $light-color;
     outline: 0;
@@ -1085,9 +1132,9 @@ a {
 	width: 100%;
 
 	a {
-		border: 1px solid #19191a;
+		border: 1px solid $dark-color;
 		border-radius: 50px;
-		color: #19191a;
+		color: $dark-color;
 		display: inline-block;
 		font-size: 12px;
 		margin-right: 10px;
@@ -1114,10 +1161,8 @@ a {
 .success {
 	padding: 1em;
 	margin-bottom: 0.75rem;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	color: #468847;
 	background-color: #dff0d8;
-	border: 1px solid #d6e9c6;
 	-webkit-border-radius: 4px;
 	 -moz-border-radius: 4px;
 	      border-radius: 4px;
@@ -1126,10 +1171,8 @@ a {
 .error {
 	padding: 1em;
 	margin-bottom: 0.75rem;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	color: #b94a48;
 	background-color: #f2dede;
-	border: 1px solid rgba(185, 74, 72, 0.3);
 	-webkit-border-radius: 4px;
 	 -moz-border-radius: 4px;
 	      border-radius: 4px;
@@ -1208,9 +1251,9 @@ a {
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	width: 100%;
 
 		.my-card {
-			height: 20rem;
 			width: 12rem;
 			position: relative;
 			z-index: 1;
@@ -1219,8 +1262,6 @@ a {
 			opacity: 0.3;
 			cursor: pointer;
 			pointer-events: none;
-			background: #2e5266;
-			background: linear-gradient(to top, #2e5266, #6e8898);
 			transition: 1s;
 
 			&:after {
