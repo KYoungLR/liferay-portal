@@ -8,17 +8,9 @@
     <title>${the_title} - ${company_name}</title>
 
     <meta content="initial-scale=1.0, width=device-width" name="viewport" />
-    <#--  font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
     <#--  pt animation js for header -->
     <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
-
-    <#--  Alloy UI  -->
-    <#--  <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
-    <link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet">  -->
-
 
     <@liferay_util["include"] page=top_head_include />
 
@@ -37,23 +29,23 @@
         <header role="banner">
             <div class="flex height-fix home">
                 <div class="canvas" id="pt" ></div>
-				        <#-- Start Logo -->
+				<#-- Start Logo -->
                 <div class="flex">
                     <div class="logo-wrapper">
                         <a class="logo-container" alt="logo"><img class="logo" alt="${logo_description}" src="${site_logo}" /></a>
                     </div>
 
-                    <#assign 
-                            preferences = freeMarkerPortletPreferences.getPreferences(
-                                    {
-                                            "portletSetupPortletDecoratorId": "barebone" , 
-                                            "destination" : "/search" 
-                                            }
-                            )
+                    <#assign
+                        preferences = freeMarkerPortletPreferences.getPreferences(
+                            {
+                                "portletSetupPortletDecoratorId": "barebone",
+                                "destination" : "/search"
+                            }
+                        )
                     />
 
                 </div>
-                        <#-- End Logo -->
+                <#-- End Logo -->
             </div>
         </header>
     <#-- End Header Content -->
@@ -79,7 +71,7 @@
 							</div>
 						</li>
 						<li>
-							<div>
+							<div class='navigation-section'>
 								<#include "${full_templates_path}/navigation.ftl" />
 							</div>
 						</li>
@@ -126,7 +118,7 @@
                 <div class="footer-area" >
                         <@liferay.language key="powered-by" />
 
-                        <a href="http://www.liferay.com" rel="external" id='kyTooptip' title="Check out our site">Liferay &copy;</a>
+                        <a href="http://www.liferay.com" id="kyTooptip" rel="external" title="Check out our site">Liferay &copy;</a>
                 </div>
             </div>
         </footer>
@@ -134,14 +126,8 @@
     </div>
     <#-- End footer -->
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
     <#-- Header Canvas -->
     <script src="/o/kyoung-liferay-theme/js/canvas.js" type="text/javascript"></script>
-    
-    <#-- Main JS post load -->
-    <#--  <script src="/o/kyoung-liferay-theme/js/main.js" type="text/javascript"></script>  -->
 
     <@liferay_util["include"] page=body_bottom_include />
 

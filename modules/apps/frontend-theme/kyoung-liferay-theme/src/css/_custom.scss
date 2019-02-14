@@ -57,7 +57,7 @@ h5 {
 	font-size: 20px;
 }
 
-h6 { 
+h6 {
 	font-size: 18px;
 }
 
@@ -164,6 +164,7 @@ a {
 		right: 15%;
 		top: 55px;
 		width: 48px;
+		z-index: 9;
 	}
 }
 
@@ -206,7 +207,7 @@ a {
 }
 
 .menu-full-overlay-inner {
-	margin-top: 15%;
+	margin-top: 2%;
 }
 
 .menu-nav {
@@ -247,7 +248,7 @@ a {
 		a {
 			color: $light-color;
 			display: inline-block;
-			font-size: 35px;
+			font-size: 20px;
 			font-weight: bold;
 			line-height: 1.35;
 			text-align: center;
@@ -296,7 +297,7 @@ a {
 }
 
 .user-personal-bar {
-	padding-bottom: 60px;
+	padding-bottom: 20px;
 }
 
 .navbar-collapse .navbar-nav {
@@ -416,7 +417,7 @@ a {
 		}
 	}
 
-	.portlet {	
+	.portlet {
 		.header-featured-area {
 			.container {
 				.header-featured-content {
@@ -447,10 +448,16 @@ a {
 		}
 	}
 
-	.menu-nav ul li a {
-		font-family: 'Open Sans-Light';
-		font-size: 20px;
-		line-height: 1;
+	.menu-nav {
+		ul {
+			li {
+				a {
+					font-family: 'Open Sans-Light';
+					font-size: 20px;
+					line-height: 1;
+				}
+			}
+		}
 	}
 
 	.social-btn {
@@ -465,7 +472,7 @@ a {
 }
 
 @media (max-width: $screen-sm-min) {
-	.portlet {	
+	.portlet {
 		.header-featured-area {
 			.container {
 				.header-featured-content {
@@ -478,6 +485,7 @@ a {
 			}
 		}
 	}
+
 	.menu-close-btn {
 		height: 40px;
 		line-height: 35px;
@@ -551,8 +559,6 @@ a {
 	width: 100%;
 
 	.media {
-		-o-transition: all 0.5s;
-		-webkit-transition: all 0.5s;
 		border-bottom: 1px solid $border-color;
 		margin-bottom: 20px;
 		margin-top: 15px;
@@ -566,8 +572,6 @@ a {
 	}
 
 	.media-heading {
-		-o-transition: all 0.5s;
-		-webkit-transition: all 0.5s;
 		font-size: 22px;
 		font-weight: 500;
 		transition: all 0.5s;
@@ -580,7 +584,7 @@ a {
 
 	.media-left {
 		padding-right: 15px;
-	}	
+	}
 }
 
 .feature-btn {
@@ -654,7 +658,7 @@ a {
 }
 
 .profile-img {
-	margin-top: 80px
+	margin-top: 80px;
 }
 
 .header-featured-content h1 span {
@@ -669,8 +673,6 @@ a {
 	margin: 0 10px;
 	padding: 11px 22px;
 	text-transform: uppercase;
-	-webkit-transition: all 0.5s;
-	-o-transition: all 0.5s;
 	transition: all 0.5s;
 
 	i {
@@ -742,7 +744,6 @@ a {
 /* ---------- Video ---------- */
 
 #video {
-	-webkit-background-size: cover;
 	background-attachment: fixed;
 	background-image: url("/o/kyoung-liferay-theme/images/city.jpg");
 	background-position: center center;
@@ -765,10 +766,8 @@ a {
 }
 
 .video-close-btn {
-	-o-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	border-radius: 50%;
 	border: 2px solid $light-color;
+	border-radius: 50%;
 	color: $light-color;
 	display: inline-block;
 	font-size: 18px;
@@ -783,7 +782,6 @@ a {
 	width: 50px;
 
 	&:hover, &:focus {
-		-webkit-transform: scale(1.2);
 		color: $light-color;
 		transform: scale(1.2);
 	}
@@ -803,10 +801,8 @@ a {
 }
 
 .video-play-btn {
-	-o-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	border-radius: 50%;
 	border: 2px solid $light-color;
+	border-radius: 50%;
 	color: $light-color;
 	display: inline-block;
 	font-size: 22px;
@@ -818,15 +814,12 @@ a {
 	width: 60px;
 
 	&:hover, &:focus {
-		-webkit-transform: scale(1.2);
 		color: $light-color;
 		transform: scale(1.2);
 	}
 }
 
 .video-iframe-area {
-	-o-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 	background-color: rgba(0, 0, 0, 0.84);
 	bottom: 0;
 	display: none;
@@ -943,8 +936,6 @@ a {
 		text-align: left;
 
 		a {
-			-o-transition: all 0.5s;
-			-webkit-transition: all 0.5s;
 			color: $dark-color;
 			display: block;
 			padding: 12px 15px;
@@ -1043,8 +1034,8 @@ a {
 	.form-group {
 		textarea {
 			background: transparent;
-			border-radius: 10px;
 			border: 1px solid $placeholder-color;
+			border-radius: 10px;
 			color: $complementary-color;
 			font-size: 18px;
 			height: 190px;
@@ -1058,20 +1049,6 @@ a {
 		background-color: $light-color;
 		box-shadow: none;
 		outline: 0;
-	}
-}
-
-.contact-form {
-	.form-control::-webkit-input-placeholder {
-		color: $placeholder-color;
-		font-size: 15px;
-	}
-}
-
-.contact-form {
-	.form-control:-ms-input-placeholder {
-		color: $placeholder-color;
-		font-size: 15px;
 	}
 }
 
@@ -1147,7 +1124,7 @@ a {
 	.lfr-ddm-form-page {
 		> .row {
 			margin-left: 0;
-			margin-right: 0
+			margin-right: 0;
 		}
 	}
 }
@@ -1198,7 +1175,6 @@ a {
 }
 
 .send-msg-btn {
-	-webkit-transition: all 0.5s;
 	background-color: $bright-color;
 	border: 1px solid $bright-color;
 	border-radius: 10px;
@@ -1220,14 +1196,12 @@ a {
 .contact-form, .input-group {
 	.form-control:focus {
 		background-color: transparent;
-		border: 1px solid $bright-color;    
+		border: 1px solid $bright-color;
 	}
 }
 
 .success {
 	background-color: #DFF0D8;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 	color: #468847;
 	margin-bottom: 0.75rem;
@@ -1236,8 +1210,6 @@ a {
 
 .error {
 	background-color: #F2DEDE;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 	color: #B94A48;
 	margin-bottom: 0.75rem;
@@ -1261,7 +1233,6 @@ a {
 	width: 100%;
 
 	.my-card {
-		-webkit-transform: scale(0.6) translateY(-2rem);
 		cursor: pointer;
 		opacity: 0.3;
 		pointer-events: none;
@@ -1272,7 +1243,6 @@ a {
 		z-index: 1;
 
 		&:after {
-			-webkit-filter: blur(4px);
 			background-color: rgba(0, 0, 0, 0.3);
 			border-radius: 100%;
 			bottom: -5rem;
@@ -1285,7 +1255,6 @@ a {
 
 		> * {
 			&:before {
-				-webkit-transform: translateX(-50%) translateY(-50%);
 				color: $light-color;
 				font-size: 3rem;
 				font-weight: 300;
@@ -1298,7 +1267,6 @@ a {
 	}
 
 	.my-card.active {
-		-webkit-transform: scale(1) translateY(0) translateX(0);
 		opacity: 1;
 		pointer-events: auto;
 		transform: scale(1) translateY(0) translateX(0);
@@ -1307,7 +1275,6 @@ a {
 	}
 
 	.my-card.prev, .my-card.next {
-		-webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
 		opacity: 0.6;
 		pointer-events: auto;
 		transform: scale(0.8) translateY(-1rem) translateX(0);
