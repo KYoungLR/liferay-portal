@@ -5,7 +5,9 @@
                 <div class="contact-area">
 
                     <div class="title-area">
-                        <h2 class="heading-title">GET IN TOUCH</h2>
+                        <h2 class="heading-title">
+                            <@liferay.language key="get-in-touch" />
+                        </h2>
                         <span class="title-dot"></span>
                         <p>${ContactSummary.getData()}</p>
                     </div>
@@ -25,7 +27,11 @@
                                         <div class="form-group">
                                             <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
                                         </div>
-                                        <button class="send-msg-btn" type="submit"><span>SUBMIT</span></button>
+                                        <button class="send-msg-btn" type="submit">
+                                            <span>
+                                                <@liferay.language key="submit" />
+                                            </span>
+                                        </button>
                                     </form>
                                 </div>
                             </div>
@@ -34,13 +40,17 @@
                                 <div class="contact-right">
                                     <div class="contact-right-single">
                                         <div class="icon"><span class="fa fa-map-marker"></span></div>
-                                        <p><strong>Office Location</strong></p>
+                                        <p class="office-heading">                            
+                                            <@liferay.language key="office-location" />
+                                        </p>
                                         <p>${OfficeLocation.getData()}</p>
                                     </div>
 
                                     <div class="contact-right-single">
                                         <div class="icon"><span class="fa fa-phone"></span></div>
-                                        <p><strong>Phone Number</strong></p>
+                                        <p class="office-heading">                            
+                                            <@liferay.language key="phone-number" />
+                                        </p>
                                         <#if PhoneNumber.getSiblings()?has_content>
                                             <#list PhoneNumber.getSiblings() as cur_PhoneNumber>
                                                 <p>${cur_PhoneNumber.getData()}</p>
@@ -50,7 +60,9 @@
 
                                     <div class="contact-right-single">
                                         <div class="icon"><span class="fa fa-envelope"></span></div>
-                                        <p><strong>Email Address</strong></p>
+                                        <p class="office-heading">
+                                            <@liferay.language key="email-address" />
+                                        </p>
                                         <#if EmailAddress.getSiblings()?has_content>
                                             <#list EmailAddress.getSiblings() as cur_EmailAddress>
                                                 <p>${cur_EmailAddress.getData()}</p>

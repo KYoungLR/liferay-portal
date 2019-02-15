@@ -4,7 +4,9 @@
             <div class="col-md-12">
                 <div class="faq-area">
                     <div class="title-area">
-                        <h2 class="title">FAQ</h2>
+                        <h2 class="title">
+                            <@liferay.language key="faq" />
+                        </h2>
                         <span class="title-dot"></span>
                     </div>
                     <div class="faq-content">

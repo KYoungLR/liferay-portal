@@ -5,7 +5,9 @@
                 <div class="download-area">
 
                     <div class="title-area">
-                        <h2 class="title">GET THE APP</h2>
+                        <h2 class="title">
+                            <@liferay.language key="get-the-app" />
+                        </h2>
                         <span class="title-dot"></span>
                         <p>${GetTheAppSummary.getData()}</p>
                     </div>

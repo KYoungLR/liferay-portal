@@ -4,7 +4,9 @@
             <div class="col-md-12">
                 <div class="apps-screenshot-area">
                     <div class="title-area">
-                        <h2 class="title">APPS SCREENSHOT</h2>
+                        <h2 class="title">
+                            <@liferay.language key="apps-screenshot" />
+                        </h2>
                         <span class="title-dot"></span>
                         <p>${AppScreenshotSummary.getData()}</p>
                     </div>
@@ -20,7 +22,7 @@
                                         </#if>
                                     </#list>
                                 </#if>
-                                
+
                             </div>
                         </div>
                     </div>

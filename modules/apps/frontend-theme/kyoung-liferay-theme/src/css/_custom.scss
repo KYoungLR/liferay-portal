@@ -488,6 +488,10 @@ a {
 	width: 60%;
 }
 
+.header-featured-content h1 span {
+	font-weight: bold;
+}
+
 .header-featured-img {
 	display: inline;
 	float: left;
@@ -536,10 +540,6 @@ a {
 
 .profile-img {
 	margin-top: 80px;
-}
-
-.header-featured-content h1 span {
-	font-weight: bold;
 }
 
 .social-btn {
@@ -1027,6 +1027,10 @@ a {
 
 .portlet-header {
 	display: none;
+}
+
+.office-heading {
+	font-family: 'Open Sans-Bold';
 }
 
 .social-media {

@@ -4,7 +4,9 @@
             <div class="col-md-12">
                 <div class="feature-area">
                     <div class="title-area">
-                        <h2 class="title">OUR APP FEATURES</h2>
+                        <h2 class="title">
+                            <@liferay.language key="our-app-features" />
+                        </h2>
                         <span class="title-dot"></span>
                         <#if validator.isNotNull(AppFeatureSectionSummary.getData())>
                             <p>${AppFeatureSectionSummary.getData()}</p>
@@ -16,8 +18,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="feature-content-left">
-                                    <#if AppFeatureImage.getData()?? && AppFeatureImage.getData() !=""> 
-                                    <img alt="${AppFeatureImage.getAttribute("alt")}" class="profile-img" data-fileentryid="${AppFeatureImage.getAttribute("fileEntryId")}" src="${AppFeatureImage.getData()}" /> 
+                                    <#if AppFeatureImage.getData()?? && AppFeatureImage.getData() !="">
+                                    <img alt="${AppFeatureImage.getAttribute("alt")}" class="profile-img" data-fileentryid="${AppFeatureImage.getAttribute("fileEntryId")}" src="${AppFeatureImage.getData()}" />
                                     </#if>
                                 </div>
                             </div>
