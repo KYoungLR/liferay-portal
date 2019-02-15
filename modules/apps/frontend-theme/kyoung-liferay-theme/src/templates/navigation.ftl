@@ -37,7 +37,7 @@
 
 							<li class="${nav_child_css_class}" id="layout_${nav_child.getLayoutId()}" role="presentation">
                             <#if nav_child.hasChildren()>
-								<a aria-labelledby="layout_${nav_child.getLayoutId()}" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">${nav_child.getName()}<i class="fa fa-angle-down"></i></a>
+								<a aria-labelledby="layout_${nav_child.getLayoutId()}" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">${nav_child.getName()}<span class="fa fa-angle-down"></span></a>
                                 <#else>
                                 <a aria-labelledby="layout_${nav_child.getLayoutId()}" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">${nav_child.getName()}</a>
 							</li>

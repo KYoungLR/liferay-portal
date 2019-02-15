@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="AppScreenshot" type="image" index-type="text" instance-id="eoud">
+		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20126","name":"92561d1ba31f9fe.jpg","alt":"","title":"92561d1ba31f9fe.jpg","type":"journal","uuid":"ee64067b-f70b-43ee-8b30-992219438772","fileEntryId":"70636","resourcePrimKey":"70634"}]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="AppScreenshot" type="image" index-type="text" instance-id="fecv">
+		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20126","name":"city.jpg","alt":"","title":"city.jpg","type":"journal","uuid":"568857d5-f9f8-557e-2369-dcba85f33a7d","fileEntryId":"70641","resourcePrimKey":"70634"}]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="AppScreenshot" type="image" index-type="text" instance-id="mazc">
+		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20126","name":"template-screenshot-resized.png","alt":"","title":"template-screenshot-resized.png","type":"journal","uuid":"f83d5d96-ca87-5cd0-e7c0-002c23e0be27","fileEntryId":"70646","resourcePrimKey":"70634"}]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="AppScreenshot" type="image" index-type="text" instance-id="xqun">
+		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20126","name":"iphone.png","alt":"","title":"iphone.png","type":"journal","uuid":"d2efb546-a06c-7437-272d-844383f17166","fileEntryId":"70651","resourcePrimKey":"70634"}]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="AppScreenshotSummary" type="text" index-type="keyword" instance-id="hedh">
+		<dynamic-content language-id="en_US"><![CDATA[This is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app sectionThis is the app section]]></dynamic-content>
+	</dynamic-element>
+</root>
