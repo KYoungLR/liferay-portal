@@ -60,7 +60,7 @@
                         <#if show_site_name>
                             <li>
                                 <div class="company-name">
-                                    <@liferay.language key="WELCOME TO" />
+                                    <@liferay.language key="welcome-to" />
                                     ${site_name}</div>
                             </li>
                         </#if>
