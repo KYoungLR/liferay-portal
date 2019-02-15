@@ -24,22 +24,21 @@
                                             <#assign show=''>
                                         </#if>
 
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                              <a aria-expanded="${aria}" data-parent="#accordion" data-toggle="collapse" href="${collapseHREF}">
-                              <span class="fa fa-${minus}"></span>
-                                ${cur_FAQQuestion.getData()}
-
-                              </a>
-                           </h4>
-                                                </div>
-                                                <div class="collapse panel-collapse ${show}" id="${collapse}">
-                                                    <div class="panel-body">
-                                                        ${cur_FAQQuestion.FAQAnswer.getData()}
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a aria-expanded="${aria}" data-parent="#accordion" data-toggle="collapse" href="${collapseHREF}">
+                                            <span class="fa fa-${minus}"></span>
+                                                ${cur_FAQQuestion.getData()}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="collapse panel-collapse ${show}" id="${collapse}">
+                                    <div class="panel-body">
+                                        ${cur_FAQQuestion.FAQAnswer.getData()}
+                                    </div>
+                                </div>
+                            </div>
                                 </#list>
                             </#if>
                         </div>

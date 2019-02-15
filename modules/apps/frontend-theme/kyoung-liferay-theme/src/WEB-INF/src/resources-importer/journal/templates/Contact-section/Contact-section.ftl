@@ -63,7 +63,6 @@
                                             <#if SocialMediaLogo.getSiblings()?has_content>
                                                 <#list SocialMediaLogo.getSiblings() as cur_SocialMediaLogo> <a href="${cur_SocialMediaLogo.SocialMediaURL.getData()}"><span class="fa ${cur_SocialMediaLogo.getData()}"></span></a> </#list>
                                             </#if>
-
                                         </div>
                                     </div>
 

@@ -16,7 +16,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="feature-content-left">
-                                    <#if AppFeatureImage.getData()?? && AppFeatureImage.getData() !=""> <img alt="${AppFeatureImage.getAttribute("alt")}" class="profile-img" data-fileentryid="${AppFeatureImage.getAttribute("fileEntryId")}" src="${AppFeatureImage.getData()}" /> </#if>
+                                    <#if AppFeatureImage.getData()?? && AppFeatureImage.getData() !=""> 
+                                    <img alt="${AppFeatureImage.getAttribute("alt")}" class="profile-img" data-fileentryid="${AppFeatureImage.getAttribute("fileEntryId")}" src="${AppFeatureImage.getData()}" /> 
+                                    </#if>
                                 </div>
                             </div>
                             <div class="col-md-6">

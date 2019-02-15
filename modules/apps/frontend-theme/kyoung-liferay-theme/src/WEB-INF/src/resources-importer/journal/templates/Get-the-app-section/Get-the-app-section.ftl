@@ -13,12 +13,12 @@
                     <div class="download-content">
                         <#if GetTheAppButtonText.getSiblings()?has_content>
                             <#list GetTheAppButtonText.getSiblings() as cur_GetTheAppButtonText>
-
-                                <a class="social-btn" href="#"><span class="${cur_GetTheAppButtonText.GetTheAppButtonLogo.getData()}"></span><span>${cur_GetTheAppButtonText.getData()}</span></a>
-
+                                <a class="social-btn" href="#">
+                                    <span class="${cur_GetTheAppButtonText.GetTheAppButtonLogo.getData()}"></span>
+                                    <span>${cur_GetTheAppButtonText.getData()}</span>
+                                </a>
                             </#list>
                         </#if>
-
                     </div>
 
                 </div>

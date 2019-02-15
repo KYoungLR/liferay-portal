@@ -11,10 +11,14 @@
             </div>
         </div>
     </div>
+
     <div class="video-content">
         <div class="video-iframe-area">
-            <a class="video-close-btn" href="#"><span class="fa fa-times" aria-hidden="true"></span></a>
+            <a class="video-close-btn" href="#">
+                <span class="fa fa-times" aria-hidden="true"></span>
+            </a>
             <iframe class="video-iframe" frameborder="0" height="480" src="${VideoURL.getData()}" width="854" allowfullscreen></iframe>
         </div>
     </div>
+    
 </section>
