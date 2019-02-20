@@ -77,10 +77,14 @@
                                     </div>
 
                                     <div class="contact-line-single">
-                                        <div class="icon"><span class="fa fa-envelope"></span></div>
+                                        <div class="icon">
+                                            <span class="fa fa-envelope"></span>
+                                        </div>
+
                                         <div class="office-heading">
                                             <@liferay.language key="email-address" />
                                         </div>
+
                                         <#if EmailAddress.getSiblings()?has_content>
                                             <#list EmailAddress.getSiblings() as cur_EmailAddress>
                                                 <div class="office-data">
@@ -99,10 +103,8 @@
                                             </#if>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,7 @@
                             ${AppScreenshotSummary.getData()}
                         </div>
                     </div>
+
                     <div class="apps-screenshot-content">
                         <div class="apps-screenshot-slider">
                             <div class="card-carousel">

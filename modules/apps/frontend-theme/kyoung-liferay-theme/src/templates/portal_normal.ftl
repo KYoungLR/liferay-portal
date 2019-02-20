@@ -9,8 +9,6 @@
 
     <meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
-    <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
-
     <@liferay_util["include"] page=top_head_include />
 
 </head>
@@ -125,9 +123,6 @@
     </#if>
     </div>
     <#-- End footer -->
-
-    <#-- Header Canvas -->
-    <script src="/o/kyoung-liferay-theme/js/canvas.js" type="text/javascript"></script>
 
     <@liferay_util["include"] page=body_bottom_include />
 

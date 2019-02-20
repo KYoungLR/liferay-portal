@@ -7,6 +7,7 @@
                         <h2>
                             <@liferay.language key="watch-promo-video" />
                         </h2>
+
                         <a class="video-play-btn" href="#" id='kyTooltip' title="Click To Play">
                             <span aria-hidden="true" class="fa fa-play"></span>
                         </a>
