@@ -9,7 +9,6 @@
 
     <meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
-    <#--  pt animation js for header -->
     <script src="/o/kyoung-liferay-theme/js/pt.min.js"></script>
 
     <@liferay_util["include"] page=top_head_include />
@@ -61,7 +60,8 @@
                             <li>
                                 <div class="company-name">
                                     <@liferay.language key="welcome-to" />
-                                    ${site_name}</div>
+                                    ${site_name}
+                                </div>
                             </li>
                         </#if>
 
@@ -75,7 +75,7 @@
 								<#include "${full_templates_path}/navigation.ftl" />
 							</div>
 						</li>
-						<#--  Search Bar  -->
+
 						<#if show_header_search>
 							<li>
 								<div class="search-container">
@@ -99,14 +99,14 @@
             <h1 class="sr-only">${the_title}</h1>
             <#if selectable>
                 <@liferay_util["include"] page=content_include />
-                <#else>
-                    ${portletDisplay.recycle()}
+            <#else>
+                ${portletDisplay.recycle()}
 
-                    ${portletDisplay.setTitle(the_title)}
+                ${portletDisplay.setTitle(the_title)}
 
-                    <@liferay_theme["wrap-portlet"] page="portlet.ftl">
-                        <@liferay_util["include"] page=content_include />
-                        </@>
+                <@liferay_theme["wrap-portlet"] page="portlet.ftl">
+                    <@liferay_util["include"] page=content_include />
+                    </@>
             </#if>
         </section>
     </div>
@@ -116,9 +116,9 @@
         <footer id="footer" role="contentinfo">
             <div class="container">
                 <div class="footer-area" >
-                        <@liferay.language key="powered-by" />
+                    <@liferay.language key="powered-by" />
 
-                        <a href="http://www.liferay.com" id="kyTooptip" rel="external" title="Check out our site">Liferay &copy;</a>
+                    <a href="http://www.liferay.com" id="kyTooptip" rel="external" title="Check out our site">Liferay &copy;</a>
                 </div>
             </div>
         </footer>

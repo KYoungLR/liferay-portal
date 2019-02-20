@@ -106,8 +106,8 @@
         },
         {
             "friendlyURL": "/link-page",
-            "name": "Link to another Page",
-            "title": "Link to another Page",
+            "name": "Another Page",
+            "title": "Another Page",
             "type": "link_to_layout",
             "typeSettings": "linkToLayoutId=1"
         },

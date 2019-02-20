@@ -3,9 +3,14 @@
         <div class="col-md-12">
             <div class="contact-area">
                 <div class="title-area">
-                    <h2 class="title">${SectionTitle.getData()}</h2>
+                    <h2 class="title">
+                        ${SectionTitle.getData()}
+                    </h2>
                     <span class="title-dot"></span>
-                    <p>${SectionSummary.getData()}</p>
+
+                    <div class="section-summary">
+                        ${SectionSummary.getData()}
+                    </div>
                 </div>
             </div>
         </div>

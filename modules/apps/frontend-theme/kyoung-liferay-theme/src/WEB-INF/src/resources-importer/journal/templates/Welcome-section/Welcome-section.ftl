@@ -5,13 +5,21 @@
 				<img alt="${Imagee3k2.getAttribute("alt")}" data-fileentryid="${Imagee3k2.getAttribute("fileEntryId")}" src="${Imagee3k2.getData()}" />
 			</#if>
         </div>
+
         <div class="header-featured-content">
-            <h1>${WelcomeSummaryTitle.getData()}</h1>
-            <p>${WelcomeSummary.getData()}</p>
+            <h1>
+                ${WelcomeSummaryTitle.getData()}
+            </h1>
+
+            <div class="header-featured-summary">
+                ${WelcomeSummary.getData()}
+            </div>
+
             <div class="app-download-area">
                 <h4>
 					<@liferay.language key="download-the-app" />
 				</h4>
+
                 <#if WelcomeDownloadText.getSiblings()?has_content>
                     <#list WelcomeDownloadText.getSiblings() as cur_WelcomeDownloadText>
 						<a class="social-btn" href="#">

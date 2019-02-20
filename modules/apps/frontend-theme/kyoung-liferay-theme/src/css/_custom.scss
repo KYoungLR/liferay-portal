@@ -1,22 +1,8 @@
-@import "components/breadcrumb";
-
-@import "components/group-item";
-
-@import "components/info-panel";
-
-@import "components/navbars";
-
-@import "components/sidebar";
-
-@import "components/splitter";
-
-@import "components/table";
-
-@import "components/widget";
-
 @import "portlet/portlet_decorators";
 
 @import "portlet/portlet_hello_world";
+
+@import "components/navbars";
 
 /* ---------- Header ---------- */
 
@@ -162,7 +148,7 @@ a {
 		height: 48px;
 		position: absolute;
 		right: 15%;
-		top: 55px;
+		top: 0;
 		width: 48px;
 		z-index: 9;
 	}
@@ -207,7 +193,7 @@ a {
 }
 
 .menu-full-overlay-inner {
-	margin-top: 2%;
+	margin-top: 5%;
 }
 
 .menu-nav {
@@ -247,7 +233,6 @@ a {
 
 		a {
 			color: $light-color;
-			display: inline-block;
 			font-size: 20px;
 			font-weight: bold;
 			line-height: 1.35;
@@ -288,6 +273,14 @@ a {
 	font-size: 17px;
 	line-height: 1.59;
 	list-style: disc;
+}
+
+.navigation-section {
+	.sort-pages {
+		.dropdown-link {
+			display: inline-block;
+		}
+	}
 }
 
 .search-container {
@@ -459,7 +452,7 @@ a {
 		}
 	}
 
-	.media-left {
+	.app-feature-media {
 		padding-right: 15px;
 	}
 }
@@ -953,13 +946,13 @@ a {
 	width: 100%;
 }
 
-.contact-left {
+.contact-form-area {
 	display: inline;
 	float: left;
 	width: 100%;
 }
 
-.contact-right {
+.contact-line {
 	display: inline;
 	float: left;
 	margin-top: 10px;
@@ -967,7 +960,7 @@ a {
 	width: 100%;
 }
 
-.contact-right-single {
+.contact-line-single {
 	display: inline;
 	float: left;
 	margin-bottom: 35px;
@@ -1016,7 +1009,7 @@ a {
 	border-radius: 10px;
 }
 
-#form-messages {
+#formMessages {
 	background-color: $light-color;
 	margin-bottom: 10px;
 }
@@ -1372,7 +1365,7 @@ a {
 		}
 	}
 
-	.contact-right {
+	.contact-line {
 		margin-top: 50px;
 	}
 }
@@ -1419,8 +1412,12 @@ a {
 	.menu-close-btn {
 		&:before {
 			font-size: 20px;
-			top: 30px;
+			top: 0;
 		}
+	}
+
+	.menu-full-overlay-inner {
+		margin-top: 7%;
 	}
 
 	.menu-nav {
@@ -1450,7 +1447,7 @@ a {
 			margin-left: 0;
 			padding-left: 0;
 		}
-	} 
+	}
 }
 
 @media (max-width: $screen-sm-min) {
@@ -1472,13 +1469,21 @@ a {
 		height: 40px;
 		line-height: 35px;
 		right: 5%;
-		top: 2%;
+		top: 0;
 		width: 40px;
 
 		&:before {
 			right: 5%;
 			top: 20px;
 		}
+	}
+
+	.menu-full-overlay-inner {
+		margin-top: 15%;
+	}
+
+	.menu-nav ul li a {
+		font-size: 10px;
 	}
 
 	.video-iframe-area {
