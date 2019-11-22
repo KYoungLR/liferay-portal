@@ -461,6 +461,20 @@ AUI.add(
 					return instance._getInputLanguage(languageId).val();
 				},
 
+				_afterVal() {
+					var instance = this;
+
+					var currentValue = instance.getValue(instance.getSelectedLanguageId());
+
+					if (currentValue === '') {
+						const defaultValue = instance.getValue(
+							defaultLanguageId
+						);
+
+						instance.updateInput(defaultValue);
+					}
+				},
+
 				initializer() {
 					var instance = this;
 
@@ -485,6 +499,10 @@ AUI.add(
 						Liferay.on(
 							'inputLocalized:localeChanged',
 							A.bind('_onLocaleChanged', instance)
+						),
+						Liferay.on(
+							'inputLocalized:localeChanged',
+							A.bind('_afterVal', instance)
 						),
 						Liferay.on(
 							'submitForm',
