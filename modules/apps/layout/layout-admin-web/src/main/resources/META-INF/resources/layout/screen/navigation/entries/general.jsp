@@ -252,7 +252,7 @@ renderResponse.setTitle(selLayout.getName(locale));
 	</c:otherwise>
 </c:choose>
 
-<aui:script>
+<aui:script use="liferay-form">
 	var form = document.getElementById('<portlet:namespace />editLayoutFm');
 
 	form.addEventListener('submit', function(event) {
@@ -271,5 +271,16 @@ renderResponse.setTitle(selLayout.getName(locale));
 		) {
 			submitForm(form);
 		}
+	});
+
+	var formValidator = Liferay.Form.get('<portlet:namespace />editLayoutFm')
+		.formValidator;
+
+	formValidator.on('errorField', function(obj) {
+		var ancestor = obj.validator.field.ancestor('div[id$="TabsSection"]');
+		var sectionId = ancestor.attr('id');
+		var tabsId = sectionId.replace('TabsSection', 'TabsId');
+
+		document.querySelector('#' + tabsId + ' a').click();
 	});
 </aui:script>
